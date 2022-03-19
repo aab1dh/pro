@@ -1,4 +1,5 @@
-import { TestWindow } from '@stencil/core/testing';
+
+import { newSpecPage } from '@stencil/core/testing';
 import { Recaptcha } from './recaptcha';
 
 describe('recaptcha', () => {
@@ -7,13 +8,11 @@ describe('recaptcha', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLRecaptchaElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Recaptcha],
-        html: '<recaptcha>' 
+        html: '<recaptcha>'
           + '</recaptcha>'
       });
     });

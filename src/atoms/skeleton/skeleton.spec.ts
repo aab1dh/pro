@@ -1,4 +1,4 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { Skeleton } from './skeleton';
 
 describe('skeleton', () => {
@@ -7,13 +7,11 @@ describe('skeleton', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLSkeletonElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Skeleton],
-        html: '<skeleton>' 
+        html: '<skeleton>'
           + '</skeleton>'
       });
     });

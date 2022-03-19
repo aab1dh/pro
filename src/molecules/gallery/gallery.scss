@@ -3,4 +3,6 @@ component-gallery {
   display: inline-block;
   background-color: var(--pro-background-color);
   overflow-x: hidden;
+  content-visibility: auto;
+  contain-intrinsic-size: 100vh;
 }

@@ -1,4 +1,4 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from "@stencil/core/testing";
 import { Image } from './image';
 
 describe('image', () => {
@@ -7,14 +7,12 @@ describe('image', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLImageElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Image],
-        html: '<image>' 
-          + '</image>'
+        html: '<pro-image>'
+          + '</pro-image>'
       });
     });
 

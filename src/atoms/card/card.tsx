@@ -4,7 +4,7 @@ import { Component, Fragment, h, Prop } from '@stencil/core';
 @Component({
   tag: 'pro-card',
   styleUrl: 'card.scss',
-  shadow: false
+  shadow: true
 })
 export class Card {
 @Prop() imgSrc: string;

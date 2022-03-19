@@ -1,4 +1,4 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { Carousel } from './carousel';
 
 describe('carousel', () => {
@@ -7,13 +7,11 @@ describe('carousel', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLCarouselElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Carousel],
-        html: '<carousel>' 
+        html: '<carousel>'
           + '</carousel>'
       });
     });

@@ -1,4 +1,4 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
 import { Card } from './card';
 
 describe('card', () => {
@@ -7,13 +7,11 @@ describe('card', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLCardElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Card],
-        html: '<card>' 
+        html: '<card>'
           + '</card>'
       });
     });

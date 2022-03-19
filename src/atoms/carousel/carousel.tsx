@@ -13,11 +13,12 @@ export class Carousel {
   };
 
   getSrc() {
-    const size = Math.ceil(Math.random() * (550 - 100) + 100);
+    const random = Math.ceil(Math.random() * (550 - 100) + 100);
     // const size = 300
-    return `https://picsum.photos/${size}?random=1`
+    // return `https://picsum.photos/${size}?random=1`
+    return `https://picsum.photos/200?random=${random}`
   }
-src = 'https://picsum.photos/200?random=1';
+
   render() {
     return (
       <Fragment>

@@ -1,4 +1,6 @@
-import { TestWindow } from '@stencil/core/testing';
+import { newSpecPage } from '@stencil/core/testing';
+
+
 import { Button } from './button';
 
 describe('button', () => {
@@ -7,13 +9,11 @@ describe('button', () => {
   });
 
   describe('rendering', () => {
-    let element: HTMLButtonElement;
-    let testWindow: TestWindow;
+    let element;
     beforeEach(async () => {
-      testWindow = new TestWindow();
-      element = await testWindow.load({
+      element = await newSpecPage({
         components: [Button],
-        html: '<button>' 
+        html: '<button>'
           + '</button>'
       });
     });

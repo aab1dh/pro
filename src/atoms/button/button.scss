@@ -3,14 +3,15 @@
   content-visibility: auto;
   contain-intrinsic-size: 20px;
   div {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     color: var(--pro-color-primary);
     border: 1px solid #ccc;
     background: #ddd;
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     vertical-align: middle;
-    max-width: 100px;
+    // max-width: 100px;
     padding: 5px;
     text-align: center;
     user-select: none;
