@@ -4,7 +4,7 @@
   contain-intrinsic-size: 20px;
   div {
     display: inline-block;
-    color: #444;
+    color: var(--pro-color-primary);
     border: 1px solid #ccc;
     background: #ddd;
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
