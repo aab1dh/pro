@@ -1,0 +1,25 @@
+import { Component, Fragment, h, Prop } from '@stencil/core';
+
+
+@Component({
+  tag: 'pro-card',
+  styleUrl: 'card.scss',
+  shadow: false
+})
+export class Card {
+@Prop() imgSrc: string;
+
+  render() {
+    return (
+
+      <Fragment>
+<div class="card-container">
+
+    <pro-img src={this.imgSrc}></pro-img>
+
+    <pro-button>Wow</pro-button>
+    </div>
+      </Fragment>
+    );
+  }
+}

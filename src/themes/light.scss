@@ -1,0 +1,104 @@
+:root {
+  /** primary **/
+  --pro-color-primary: #3880ff;
+  --pro-color-primary-rgb: 56, 128, 255;
+  --pro-color-primary-contrast: #ffffff;
+  --pro-color-primary-contrast-rgb: 255, 255, 255;
+  --pro-color-primary-shade: #3171e0;
+  --pro-color-primary-tint: #4c8dff;
+
+  /** secondary **/
+  --pro-color-secondary: #0cd1e8;
+  --pro-color-secondary-rgb: 12, 209, 232;
+  --pro-color-secondary-contrast: #ffffff;
+  --pro-color-secondary-contrast-rgb: 255, 255, 255;
+  --pro-color-secondary-shade: #0bb8cc;
+  --pro-color-secondary-tint: #24d6ea;
+
+  /** tertiary **/
+  --pro-color-tertiary: #7044ff;
+  --pro-color-tertiary-rgb: 112, 68, 255;
+  --pro-color-tertiary-contrast: #ffffff;
+  --pro-color-tertiary-contrast-rgb: 255, 255, 255;
+  --pro-color-tertiary-shade: #633ce0;
+  --pro-color-tertiary-tint: #7e57ff;
+
+  /** success **/
+  --pro-color-success: #10dc60;
+  --pro-color-success-rgb: 16, 220, 96;
+  --pro-color-success-contrast: #ffffff;
+  --pro-color-success-contrast-rgb: 255, 255, 255;
+  --pro-color-success-shade: #0ec254;
+  --pro-color-success-tint: #28e070;
+
+  /** text **/
+  --pro-color-text: #000000;
+  --pro-color-text-rgb: #000000;
+  --pro-color-text-contrast: #000000;
+  --pro-color-text-contrast-rgb: #000000;
+  --pro-color-text-shade: #000000;
+  --pro-color-text-tint: #000000;
+
+  /** warning **/
+  --pro-color-warning: #ffce00;
+  --pro-color-warning-rgb: 255, 206, 0;
+  --pro-color-warning-contrast: #ffffff;
+  --pro-color-warning-contrast-rgb: 255, 255, 255;
+  --pro-color-warning-shade: #e0b500;
+  --pro-color-warning-tint: #ffd31a;
+
+  /** danger **/
+  --pro-color-danger: #f04141;
+  --pro-color-danger-rgb: 245, 61, 61;
+  --pro-color-danger-contrast: #ffffff;
+  --pro-color-danger-contrast-rgb: 255, 255, 255;
+  --pro-color-danger-shade: #d33939;
+  --pro-color-danger-tint: #f25454;
+
+  /** dark **/
+  --pro-color-dark: #222428;
+  --pro-color-dark-rgb: 34, 34, 34;
+  --pro-color-dark-contrast: #ffffff;
+  --pro-color-dark-contrast-rgb: 255, 255, 255;
+  --pro-color-dark-shade: #1e2023;
+  --pro-color-dark-tint: #383a3e;
+
+  /** medium **/
+  --pro-color-medium: #989aa2;
+  --pro-color-medium-rgb: 152, 154, 162;
+  --pro-color-medium-contrast: #ffffff;
+  --pro-color-medium-contrast-rgb: 255, 255, 255;
+  --pro-color-medium-shade: #86888f;
+  --pro-color-medium-tint: #a2a4ab;
+
+  /** light **/
+  --pro-color-light: #f4f5f8;
+  --pro-color-light-rgb: 244, 244, 244;
+  --pro-color-light-contrast: #000000;
+  --pro-color-light-contrast-rgb: 0, 0, 0;
+  --pro-color-light-shade: #d7d8da;
+  --pro-color-light-tint: #f5f6f9;
+
+  /** transparent **/
+  --pro-color-trnas: transparent;
+  --pro-color-trnas-rgb: transparent;
+  --pro-color-trnas-contrast: transparent;
+  --pro-color-trnas-contrast-rgb: transparent;
+  --pro-color-trnas-shade: transparent;
+  --pro-color-trnas-tint: transparent;
+
+  /** scrollbar **/
+  --pro-color-scrollbar: #dfdfdf;
+  --pro-btn-background-contrast: #000000;
+  --pro-btn-background-contrast-rgb: 0, 0, 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-toolbar-background: white;
+    --color-toolbar-text: black;
+
+    --pro-background-color: #ffffff;
+    --pro-background-color-rgb: 255, 255, 255;
+  }
+}

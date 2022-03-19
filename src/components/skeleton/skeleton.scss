@@ -1,0 +1,12 @@
+:host {
+  box-sizing: border-box;
+  content-visibility: auto;
+  contain-intrinsic-size: 200px;
+  div {
+    display: inline-block;
+    color: rebeccapurple;
+    width: 200px;
+    height: 200px;
+    outline: 1px solid;
+  }
+}

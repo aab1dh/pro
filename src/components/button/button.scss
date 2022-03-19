@@ -1,0 +1,27 @@
+:host {
+  box-sizing: border-box;
+  content-visibility: auto;
+  contain-intrinsic-size: 20px;
+  div {
+    display: inline-block;
+    color: #444;
+    border: 1px solid #ccc;
+    background: #ddd;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    vertical-align: middle;
+    max-width: 100px;
+    padding: 5px;
+    text-align: center;
+    user-select: none;
+    -user-select: none;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -webkit-user-select: none; /* Safari only */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+  }
+  div:hover {
+    color: red;
+    box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.6);
+  }
+}

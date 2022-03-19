@@ -1,0 +1,13 @@
+@import 'src/themes/light.scss';
+@import 'src/themes/dark.scss';
+:root {
+  body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 0;
+  }
+  pro-modal {
+    --width: 100% !important;
+    --height: 100% !important;
+  }
+}
