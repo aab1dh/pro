@@ -42,7 +42,6 @@
     "@storybook/addon-notes": "^5.3.21",
     "@storybook/html": "^6.4.19",
     "@storybook/preset-scss": "^1.0.3",
-    "@storybook/react": "^6.4.19",
     "@types/jest": "^27.4.1",
     "babel-loader": "^8.2.3",
     "case": "^1.6.3",
