@@ -24,29 +24,24 @@ export class ComponentGallery {
   @Prop() last: string;
 
   @State() state: {
-    cards: ["card1", "card2"]
+    cards: ['card1', 'card2'];
   };
-
 
   // private getText(): string {
   //   return format(this.first, this.middle, this.last);
   // }
 
-
-
-
   render() {
     return (
       <Fragment>
-    {/* <div>Hello, World! I'm {this.getText()}</div> */}
-    {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
-    {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
+        {/* <div>Hello, World! I'm {this.getText()}</div> */}
+        {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
+        {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
 
- {[...Array(40)].map(() => <pro-carousel></pro-carousel>)}
-
-
-
-    </Fragment>
+        {[...Array(40)].map(() => (
+          <pro-carousel></pro-carousel>
+        ))}
+      </Fragment>
     );
   }
 }

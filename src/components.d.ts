@@ -21,7 +21,7 @@ export namespace Components {
         "middle": string;
     }
     interface ProButton {
-        "styles": { [key: string]: string; };
+        "styles": { [key: string]: string };
     }
     interface ProCard {
         "imgSrc": string;
@@ -107,7 +107,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface ProButton {
-        "styles"?: { [key: string]: string; };
+        "styles"?: { [key: string]: string };
     }
     interface ProCard {
         "imgSrc"?: string;
