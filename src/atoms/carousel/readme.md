@@ -7,10 +7,6 @@
 
 ## Dependencies
 
-### Used by
-
- - [component-gallery](../../molecules/gallery)
-
 ### Depends on
 
 - [pro-card](../card)
@@ -22,7 +18,6 @@ graph TD;
   pro-card --> pro-img
   pro-card --> pro-button
   pro-img --> pro-skeleton
-  component-gallery --> pro-carousel
   style pro-carousel fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

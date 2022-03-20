@@ -134,6 +134,7 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
   // is NOT created inside of the render function below!!
   const mainEl = document.createElement('div');
   const controls = getPropsWithControlValues(Component, { args, argTypes });
+  console.log('CONTROLS', controls);
   const storyOpts = notes ? { notes, args: controls.args, argTypes: controls.argTypes } : { args: controls.args, argTypes: controls.argTypes };
   const tag = Component.is;
 
@@ -299,6 +300,9 @@ function getPropsWithControlValues(Component, controlOptions) {
         args: { ...controls.args, [key]: control.default },
         argTypes: { ...controls.argTypes, [key]: control.control },
       };
+
+      if (controls.args.src) controls.args.src = controls.args.src.replaceAll("'", '').replaceAll('`', '');
+      console.log('controls 2', controls);
     }
   });
 

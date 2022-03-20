@@ -15,7 +15,7 @@ export class Image {
 
   @Element() host: HTMLProImgElement;
 
-@Prop() src = 'https://picsum.photos/200?random=1';
+@Prop() src = `https://picsum.photos/200?random=1`;
 
 
   connectedCallback() {

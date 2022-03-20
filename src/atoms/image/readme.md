@@ -10,7 +10,7 @@
 | Property | Attribute | Description | Type     | Default                                |
 | -------- | --------- | ----------- | -------- | -------------------------------------- |
 | `height` | `height`  |             | `number` | `undefined`                            |
-| `src`    | `src`     |             | `string` | `'https://picsum.photos/200?random=1'` |
+| `src`    | `src`     |             | `string` | ``https://picsum.photos/200?random=1`` |
 | `width`  | `width`   |             | `number` | `undefined`                            |
 
 
