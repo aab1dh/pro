@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ComponentGallery {
+        "imgSrc": string;
     }
     interface ProButton {
         "styles": { [key: string]: string };
@@ -81,6 +82,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ComponentGallery {
+        "imgSrc"?: string;
     }
     interface ProButton {
         "styles"?: { [key: string]: string };

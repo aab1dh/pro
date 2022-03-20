@@ -22,7 +22,7 @@
     "test": "stencil test --spec",
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
-    "storybook.run": "yarn build && start-storybook -p 6006 -s dist",
+    "storybook:dev": "yarn build && start-storybook -p 6006 -s ./src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",

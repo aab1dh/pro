@@ -30,3 +30,7 @@ function loadStories() {
 }
 
 configure(loadStories, module);
+
+if (module.hot) {
+  module.hot.accept(() => configureStorybook(loadStories));
+}

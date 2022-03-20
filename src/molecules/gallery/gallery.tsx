@@ -1,10 +1,11 @@
-import { Component, h, Fragment } from '@stencil/core';
+import { Component, h, Fragment, Prop } from '@stencil/core';
 @Component({
   tag: 'component-gallery',
   styleUrl: 'gallery.scss',
   shadow: false,
 })
 export class ComponentGallery {
+  @Prop() imgSrc: string;
   render() {
     return (
       <Fragment>
