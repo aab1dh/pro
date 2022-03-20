@@ -42,8 +42,10 @@ export class ComponentGallery {
     {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
     {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
 
-
  {[...Array(40)].map(() => <pro-carousel></pro-carousel>)}
+
+
+
     </Fragment>
     );
   }

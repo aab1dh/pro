@@ -16,12 +16,13 @@
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "start:dev": "stencil build --dev --watch --serve",
+    "start:prod": "stencil build --watch --serve",
     "generate": "stencil generate",
     "test": "stencil test --spec",
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
-    "storybook.run": "start-storybook -p 6006 -s dist",
+    "storybook.run": "yarn build && start-storybook -p 6006 -s dist",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006"

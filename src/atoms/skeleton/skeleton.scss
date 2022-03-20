@@ -4,9 +4,23 @@
   contain-intrinsic-size: 200px;
   div {
     display: inline-block;
-    color: rebeccapurple;
     width: 200px;
     height: 200px;
-    outline: 1px solid;
+    // outline: 1px solid;
+    opacity: 0.7;
+    // background-color: rgba(var(--pro-text-color-rgb), 0.065);
+    background: linear-gradient(120deg, #e5e5e5 30%, #ffffff 38%, #f2f2f2 40%, #e5e5e5 48%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: skeleton-loading 1s linear infinite alternate;
+  }
+
+  @keyframes skeleton-loading {
+    0% {
+    }
+
+    100% {
+      background-position: -100% 0;
+    }
   }
 }

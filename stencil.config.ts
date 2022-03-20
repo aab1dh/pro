@@ -21,9 +21,9 @@ export const config: Config = {
     sass({
       includePaths: ["./node_modules/"],
       injectGlobalPaths: [
-        'src/global/variables.scss', //adds "@use 'src/global/variables.scss' as var" statement
-        'src/global/mixins.scss', //root namespace, no prefix needed to access
-        'src/global/animations.scss' //namespace defaults to 'animations',
+        'src/styles/variables.scss', //adds "@use 'src/styles/variables.scss' as var" statement
+        'src/styles/mixins.scss', //root namespace, no prefix needed to access
+        'src/styles/animations.scss' //namespace defaults to 'animations',
       ]
     })
   ]

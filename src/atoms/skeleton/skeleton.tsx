@@ -11,7 +11,7 @@ export class Skeleton {
   render() {
     return (
       <Fragment>
-        <div class="skeleton">this is a skeleton</div>
+        <div class="skeleton"></div>
       </Fragment>
     );
   }

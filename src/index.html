@@ -12,11 +12,51 @@
         width: 100%;
       }
     </style>
+    <style type="text/css">
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .pre-loader {
+        z-index: -1;
+        transition: opacity 0.8s ease-in-out;
+        margin: 0 auto;
+        border: 8px solid #f3f3f3;
+        border-top: 8px solid #428cff;
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        -webkit-animation: spin 2s linear 30;
+        animation: spin 2s linear 30;
+        /* // margin-top: 42vh; */
+        opacity: 0;
+        display: none;
+        will-change: transform;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-left: -60px;
+        margin-top: -60px;
+      }
+
+      component-gallery:empty + .pre-loader {
+        opacity: 1;
+        z-index: 100;
+        display: block;
+      }
+    </style>
     <script src="/build/index.esm.js"></script>
     <script type="module" src="/build/pro.esm.js"></script>
     <script nomodule src="/build/pro.js"></script>
   </head>
-  <body>
+  <body style="background-color: var(--pro-background-color)">
     <component-gallery first="Stencil" middle="Stencil" last="'Don't call me a framework ok?' JS"></component-gallery>
+    <div class="pre-loader"></div>
+    <noscript>Please enable JavaScript to continue using this application.</noscript>
   </body>
 </html>
