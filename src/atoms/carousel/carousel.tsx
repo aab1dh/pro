@@ -12,7 +12,7 @@ export class Carousel {
     cards: ["card1", "card2"]
   };
 
-  getSrc() {
+  private getSrc() {
     const random = Math.ceil(Math.random() * (550 - 100) + 100);
     // const size = 300
     // return `https://picsum.photos/${size}?random=1`

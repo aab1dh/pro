@@ -29,7 +29,7 @@ this.width = this.width ??= this.host.shadowRoot.querySelector('img').width;
   }
 
 
-  handleImgLoad() {
+  private handleImgLoad() {
     // console.log($event);
     // console.log(this.host.shadowRoot.querySelector('img'))
     this.host.shadowRoot.querySelector('img').style.visibility = null;

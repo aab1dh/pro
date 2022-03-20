@@ -1,15 +1,15 @@
 import { Component, Fragment, h, Element, Prop } from '@stencil/core';
 
-
 @Component({
   tag: 'pro-button',
   styleUrl: 'button.scss',
-  shadow: true
+  shadow: true,
 })
+
 export class Button {
   @Element() host: HTMLProButtonElement;
 
-  @Prop() styles: { [key: string]: string; };
+  @Prop() styles: { [key: string]: string; }
 
 
 

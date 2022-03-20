@@ -2,7 +2,21 @@
   "parserOptions": {
     "project": "./tsconfig.json"
   },
-  "extends": [
-    "plugin:@stencil/recommended"
-  ]
+  "extends": ["plugin:@stencil/recommended"],
+  "plugins": [],
+  "rules": {
+    "@stencil/decorators-context": "off",
+    "@stencil/required-jsdoc": "off",
+    "react/jsx-no-bind": "off",
+    "@stencil/strict-boolean-conditions": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    }
+  ],
+  "ignorePatterns": ["dist/", "loader/", "www/", "node_modules/", "src/serviceWorker.ts"]
 }
