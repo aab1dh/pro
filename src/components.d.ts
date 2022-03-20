@@ -7,18 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ComponentGallery {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
     }
     interface ProButton {
         "styles": { [key: string]: string };
@@ -93,18 +81,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ComponentGallery {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
     }
     interface ProButton {
         "styles"?: { [key: string]: string };

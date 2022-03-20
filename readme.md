@@ -12,6 +12,8 @@ Basic design system starter kit containing key building blocks to get started wi
 - Multi theme support
 - Eslint & Prettier setup out of the box
 - Jest testing setup out of the box
+- Ability to debug from VsCode
+- Ability to run tests from VsCode
 
 ## Getting Started
 
