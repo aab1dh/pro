@@ -16,15 +16,9 @@ const COLLECTIONS = [
   },
 ];
 
-console.log('components', COLLECTIONS[1].componentsCtx.keys());
-console.log('stories', COLLECTIONS[0].storiesCtx.keys());
-
 function loadStories() {
   loader.defineCustomElements(window);
   COLLECTIONS.forEach(({ name, componentsCtx, storiesCtx }) => {
-    console.log('build step name', name);
-    console.log('build step', componentsCtx.keys());
-    console.log('build step2', storiesCtx.keys());
     buildStencilStories(name, componentsCtx, storiesCtx);
   });
 }

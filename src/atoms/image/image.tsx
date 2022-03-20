@@ -19,13 +19,10 @@ export class Image {
     if (this.height && this.width) {
       this.height = this.height ??= this.host.shadowRoot.querySelector('img').height;
       this.width = this.width ??= this.host.shadowRoot.querySelector('img').width;
-      // console.log(this.height, this.width);
     }
   }
 
   private handleImgLoad() {
-    // console.log($event);
-    // console.log(this.host.shadowRoot.querySelector('img'))
     this.host.shadowRoot.querySelector('img').style.visibility = null;
     this.showImg = true;
   }

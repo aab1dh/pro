@@ -8,7 +8,6 @@ function buildStencilStories(name, componentsCtx, storiesCtx) {
   const configs = buildGeneratorConfigs(componentsCtx, storiesCtx);
 
   const stories = storiesOf(name, module);
-  console.log('Object is', configs);
   Object.keys(configs)
     .map(comp => configs[comp])
     .forEach(config =>
@@ -30,15 +29,12 @@ import path from 'path';
  */
 function getComponentFromExports(_module) {
   const key = Object.keys(_module).find(exportKey => {
-    console.log('EXPORT KEY', exportKey);
     const _export = _module[exportKey];
-    console.log('EXPORT', _export);
     // does it quack like a stencil class component?
     if ((_export.prototype && _export.is && _export.encapsulation) || exportKey) {
       return true;
     }
   });
-  console.log('KEY', key);
   return _module[key];
 }
 
@@ -58,16 +54,14 @@ function cleanNotes(notes) {
 function buildGeneratorConfigs(componentsCtx, storiesCtx) {
   const componentRoutes = componentsCtx.keys();
   const storyRoutes = storiesCtx.keys();
-  console.log('COMPONENT ROUTES', componentRoutes.length);
-  console.log('STORY ROUTES', storyRoutes.length);
+
   return componentRoutes.reduce((obj, compRoute) => {
-    console.log('COMP ROUTE', compRoute);
     const _module = componentsCtx(compRoute);
-    console.log('MODULE', _module);
+
     const Component = getComponentFromExports(_module);
-    console.log('COMPONENT X', Component);
+
     const dirName = '/' + path.basename(path.dirname(compRoute)) + '/';
-    console.log('DIR NAME', dirName);
+
     const storyRoute = storyRoutes.find(k => k.indexOf(dirName) > -1);
 
     if (!Component) {
@@ -139,7 +133,7 @@ function createStencilStory({ Component, notes, states, args = {}, argTypes = {}
   // is NOT created inside of the render function below!!
   const mainEl = document.createElement('div');
   const controls = getPropsWithControlValues(Component, { args, argTypes });
-  console.log('CONTROLS', controls);
+
   const storyOpts = notes
     ? { notes, args: controls.args, argTypes: controls.argTypes }
     : { args: controls.args, argTypes: controls.argTypes };
@@ -313,7 +307,6 @@ function getPropsWithControlValues(Component, controlOptions) {
       };
 
       if (controls.args.src) controls.args.src = controls.args.src.replaceAll("'", '').replaceAll('`', '');
-      console.log('controls 2', controls);
     }
   });
 
