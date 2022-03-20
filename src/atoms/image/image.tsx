@@ -35,7 +35,7 @@ export class Image {
           innerHTML={this.host.innerHTML}
           style={{ ['visibility']: 'hidden' }}
           onLoad={() => this.handleImgLoad()}
-          loading="eager"
+          loading="lazy"
           src={this.src}
         />
       </Fragment>
