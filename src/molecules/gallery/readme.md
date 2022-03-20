@@ -18,7 +18,7 @@
 
 ### Depends on
 
-- [pro-carousel](../../components/carousel)
+- [pro-carousel](../../atoms/carousel)
 
 ### Graph
 ```mermaid

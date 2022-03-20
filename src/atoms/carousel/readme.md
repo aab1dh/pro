@@ -9,7 +9,7 @@
 
 ### Used by
 
- - [component-gallery](../../pages/gallery)
+ - [component-gallery](../../molecules/gallery)
 
 ### Depends on
 
