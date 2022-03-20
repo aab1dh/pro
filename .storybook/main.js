@@ -1,40 +1,33 @@
 var path = require('path');
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-viewport', '@storybook/addon-notes', '@storybook/addon-knobs'],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials', '@storybook/addon-viewport', '@storybook/addon-notes', '@storybook/addon-knobs', '@storybook/preset-scss'],
   framework: '@storybook/html',
-  webpackFinal: async (config, { configType }) => {
-    // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
-    // You can change the configuration based on that.
-    // 'PRODUCTION' is used when building the static version of storybook.
-
-    config.devServer = {
-      watchContentBase: true,
-      contentBase: path.join(__dirname, 'src'),
-      historyApiFallback: true,
-    };
-
-    config.module.rules[0].use[0].options.sourceType = 'unambiguous';
-
+  webpackFinal: config => {
     config.module.rules.push({
-      test: /.\.stories\.tsx$/,
-      exclude: /(src)/,
-      use: 'raw-loader',
+      test: /\.tsx?$/,
+      exclude: /node_modules/,
+      use: [
+        {
+          loader: require.resolve('babel-loader'),
+          options: {
+            presets: [require('@babel/preset-typescript').default, [require('@babel/preset-react').default, { runtime: 'automatic' }], require('@babel/preset-env').default],
+          },
+        },
+      ],
     });
 
+    config.resolve.extensions.push('.ts', '.tsx');
+
     config.module.rules.push({
-      test: /(@?stencil-(core)).*\.(ts|js)x?$/,
+      test: /\.mjs$/,
       include: /node_modules/,
-      use: 'babel-loader',
+      type: 'javascript/auto',
     });
 
-    config.resolve.extensions.push('.stories.tsx');
+    config.resolve.extensions.push('.mjs');
 
-    config.resolve.alias = {
-      '@src': path.resolve(__dirname, '../dist/collection'),
-    };
-
-    // Return the altered config
     return config;
   },
+  babel: async options => ({ ...options, babelrc: false }),
 };

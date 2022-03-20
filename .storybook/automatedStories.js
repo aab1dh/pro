@@ -8,7 +8,7 @@ function buildStencilStories(name, componentsCtx, storiesCtx) {
   const configs = buildGeneratorConfigs(componentsCtx, storiesCtx);
 
   const stories = storiesOf(name, module);
-
+  console.log('Object is', configs);
   Object.keys(configs)
     .map(comp => configs[comp])
     .forEach(config =>
@@ -56,11 +56,13 @@ function cleanNotes(notes) {
 function buildGeneratorConfigs(componentsCtx, storiesCtx) {
   const componentRoutes = componentsCtx.keys();
   const storyRoutes = storiesCtx.keys();
-
+  console.log('COMPONENT ROUTES', componentRoutes.length);
+  console.log('STORY ROUTES', storyRoutes.length);
   return componentRoutes.reduce((obj, compRoute) => {
     const _module = componentsCtx(compRoute);
     const Component = getComponentFromExports(_module);
     const dirName = '/' + path.basename(path.dirname(compRoute)) + '/';
+    console.log('DIR NAME', dirName);
     const storyRoute = storyRoutes.find(k => k.indexOf(dirName) > -1);
 
     if (!Component) {

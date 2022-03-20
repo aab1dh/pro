@@ -1,19 +1,10 @@
-import { Meta, StoryFn } from '@storybook/html';
-import { Button } from './button';
-
-//👇 This default export determines where your story goes in the story list
+import readme from './readme.md';
 export default {
-  /* 👇 The title prop is optional.
-   * See https://storybook.js.org/docsreact/configure/overview#configure-story-loading
-   * to learn how to generate automatic titles
+  title: 'MyButton',
+  /**
+   * Notes is an optional string which will be displayed in the "Notes"
+   * tab for your component. It is recommended to use the generated readme,
+   * however any string should suffice. This supports markdown.
    */
-  title: 'Button',
-} as Meta;
-
-//👇 We create a “template” of how args map to rendering
-const Template: StoryFn = (): HTMLElement => { return new Button().render() };
-
-export const FirstStory = Template.bind({});
-FirstStory.args = {
-  //👇 The args you need here will depend on your component
+  notes: readme,
 };
