@@ -8,6 +8,10 @@ module.exports = {
     '@storybook/addon-notes',
     '@storybook/addon-knobs',
     '@storybook/preset-scss',
+    '@storybook/addon-a11y',
+    '@hover/storybook-addon-pseudo-states',
+    'storybook-addon-designs',
+    // 'storybook-dark-mode/register', // turn off for custom theme
   ],
   framework: '@storybook/html',
   webpackFinal: config => {
@@ -42,6 +46,7 @@ module.exports = {
       use: ['style-loader', 'css-loader', 'sass-loader'],
       include: path.resolve(__dirname, '../'),
     });
+
     return config;
   },
   babel: async options => ({ ...options, babelrc: false }),

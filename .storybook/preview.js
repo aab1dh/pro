@@ -3,6 +3,20 @@ import buildStencilStories from './automatedStories';
 
 const loader = require('../loader/index.cjs.js');
 
+import { themes } from '@storybook/theming';
+
+export const parameters = {
+  darkMode: {
+    stylePreview: true,
+    // Set the initial theme
+    current: 'light',
+    // Override the default dark theme
+    dark: { ...themes.dark, appBg: 'black' },
+    // Override the default light theme
+    light: { ...themes.normal, appBg: 'red' },
+  },
+};
+
 const COLLECTIONS = [
   {
     name: 'Atoms',

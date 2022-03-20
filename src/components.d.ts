@@ -22,8 +22,6 @@ export namespace Components {
         "src": string;
         "width": number;
     }
-    interface ProRecaptcha {
-    }
     interface ProSkeleton {
     }
 }
@@ -58,12 +56,6 @@ declare global {
         prototype: HTMLProImgElement;
         new (): HTMLProImgElement;
     };
-    interface HTMLProRecaptchaElement extends Components.ProRecaptcha, HTMLStencilElement {
-    }
-    var HTMLProRecaptchaElement: {
-        prototype: HTMLProRecaptchaElement;
-        new (): HTMLProRecaptchaElement;
-    };
     interface HTMLProSkeletonElement extends Components.ProSkeleton, HTMLStencilElement {
     }
     var HTMLProSkeletonElement: {
@@ -76,7 +68,6 @@ declare global {
         "pro-card": HTMLProCardElement;
         "pro-carousel": HTMLProCarouselElement;
         "pro-img": HTMLProImgElement;
-        "pro-recaptcha": HTMLProRecaptchaElement;
         "pro-skeleton": HTMLProSkeletonElement;
     }
 }
@@ -97,8 +88,6 @@ declare namespace LocalJSX {
         "src"?: string;
         "width"?: number;
     }
-    interface ProRecaptcha {
-    }
     interface ProSkeleton {
     }
     interface IntrinsicElements {
@@ -107,7 +96,6 @@ declare namespace LocalJSX {
         "pro-card": ProCard;
         "pro-carousel": ProCarousel;
         "pro-img": ProImg;
-        "pro-recaptcha": ProRecaptcha;
         "pro-skeleton": ProSkeleton;
     }
 }
@@ -120,7 +108,6 @@ declare module "@stencil/core" {
             "pro-card": LocalJSX.ProCard & JSXBase.HTMLAttributes<HTMLProCardElement>;
             "pro-carousel": LocalJSX.ProCarousel & JSXBase.HTMLAttributes<HTMLProCarouselElement>;
             "pro-img": LocalJSX.ProImg & JSXBase.HTMLAttributes<HTMLProImgElement>;
-            "pro-recaptcha": LocalJSX.ProRecaptcha & JSXBase.HTMLAttributes<HTMLProRecaptchaElement>;
             "pro-skeleton": LocalJSX.ProSkeleton & JSXBase.HTMLAttributes<HTMLProSkeletonElement>;
         }
     }
