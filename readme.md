@@ -44,7 +44,7 @@ yarn test
 To run Storybooks, run:
 
 ```bash
-yarn storybooks.run
+yarn storybooks:dev
 ```
 
 Need help with creating stencil components? Check out Stencil docs [here](https://stenciljs.com/docs/my-first-component).
