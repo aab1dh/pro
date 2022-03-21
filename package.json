@@ -27,7 +27,7 @@
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
-    "chromatic": "npx chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}"
+    "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>"
   },
   "dependencies": {
     "@stencil/core": "^2.14.2"

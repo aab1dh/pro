@@ -14,7 +14,7 @@ export class Card {
         <div class="card-container">
           <pro-img src={this.imgSrc}></pro-img>
 
-          <pro-button>Wow</pro-button>
+          <pro-button>Like</pro-button>
         </div>
       </Fragment>
     ) as HTMLElement;
