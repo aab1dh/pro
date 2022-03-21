@@ -26,7 +26,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
-    "lint": "eslint src/**/*{.ts,.tsx} --fix"
+    "lint": "eslint src/**/*{.ts,.tsx} --fix",
+    "chromatic": "npx chromatic --project-token=${{ secrets.CHROMATIC_TOKEN }}"
   },
   "dependencies": {
     "@stencil/core": "^2.14.2"
@@ -54,6 +55,7 @@
     "@typescript-eslint/parser": "^5.15.0",
     "babel-loader": "^8.2.3",
     "case": "^1.6.3",
+    "chromatic": "^6.5.3",
     "css-loader": "^6.7.1",
     "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.5.0",
