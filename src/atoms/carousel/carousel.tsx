@@ -22,11 +22,11 @@ export class Carousel {
       <Fragment>
         <h2 class="carousel-heading">Adventure</h2>
         <span class="carousel-container">
-          {[...Array(25)].map(() => (
-            <pro-card imgSrc={this.getSrc()}></pro-card>
-          ))}
+          {[...(Array(25) as Array<HTMLElement>)].map(
+            () => (<pro-card imgSrc={this.getSrc()}></pro-card>) as HTMLElement,
+          )}
         </span>
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }

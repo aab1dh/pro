@@ -19,6 +19,6 @@ export class Button {
       <Fragment>
         <div innerHTML={this.host.innerHTML} style={this.styles} onClick={$event => this.handleClick($event)}></div>
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }

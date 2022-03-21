@@ -1,6 +1,11 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 export const config: Config = {
+  devServer: {
+    reloadStrategy: 'pageReload',
+    port: 4444,
+    openBrowser: true,
+  },
   namespace: 'pro',
   outputTargets: [
     {

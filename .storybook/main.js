@@ -47,6 +47,11 @@ module.exports = {
       include: path.resolve(__dirname, '../'),
     });
 
+    config.module.rules.push({
+      test: /\.(png|jpg|jpeg|gif)$/,
+      loader: 'url-loader',
+    });
+
     return config;
   },
   babel: async options => ({ ...options, babelrc: false }),

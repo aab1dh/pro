@@ -37,8 +37,10 @@ export class Image {
           onLoad={() => this.handleImgLoad()}
           loading="lazy"
           src={this.src}
+          width={this.width}
+          height={this.height}
         />
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }

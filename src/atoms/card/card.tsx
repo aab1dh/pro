@@ -17,6 +17,6 @@ export class Card {
           <pro-button>Like</pro-button>
         </div>
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }

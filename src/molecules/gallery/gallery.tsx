@@ -13,10 +13,8 @@ export class ComponentGallery {
         {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
         {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
 
-        {[...Array(40)].map(() => (
-          <pro-carousel></pro-carousel>
-        ))}
+        {[...(Array(40) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }

@@ -11,6 +11,6 @@ export class Skeleton {
       <Fragment>
         <div class="skeleton"></div>
       </Fragment>
-    );
+    ) as HTMLElement;
   }
 }
