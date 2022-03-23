@@ -8,5 +8,4 @@ describe('my-component', () => {
     const element = await page.find('component-gallery');
     expect(element).not.toBeNull();
   });
-
 });

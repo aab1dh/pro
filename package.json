@@ -19,7 +19,7 @@
     "start:dev": "yarn lint && stencil build --dev --watch --serve",
     "start:prod": "yarn lint && stencil build --watch --serve",
     "generate": "stencil generate",
-    "test": "stencil test --spec --json --outputFile=.jest-test-results.json || true",
+    "test": "stencil test --spec --e2e --json --outputFile=.jest-test-results.json || true",
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
     "storybook": "yarn build && start-storybook -p 6006 -s ./src",
