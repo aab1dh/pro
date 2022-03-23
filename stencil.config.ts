@@ -1,10 +1,15 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+// import { readFileSync } from 'fs';
 export const config: Config = {
   devServer: {
     reloadStrategy: 'pageReload',
     port: 4444,
     openBrowser: true,
+    // https: {
+    //   cert: readFileSync('./ssl/dev.local.crt', 'utf8'),
+    //   key: readFileSync('./ssl/dev.local.key', 'utf8')
+    // }
   },
   namespace: 'pro',
   outputTargets: [

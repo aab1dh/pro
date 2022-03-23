@@ -9,6 +9,7 @@ module.exports = {
     '@storybook/addon-a11y',
     '@hover/storybook-addon-pseudo-states',
     'storybook-addon-designs',
+    '@washingtonpost/storybook-addon-web-vitals',
     // 'storybook-dark-mode/register', // turn off for custom theme
   ],
   framework: '@storybook/html',
