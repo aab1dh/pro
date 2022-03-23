@@ -4,6 +4,15 @@ import buildStencilStories from './automatedStories';
 const loader = require('../loader/index.cjs.js');
 
 import { themes } from '@storybook/theming';
+import { withTests } from '@storybook/addon-jest';
+
+import results from '../.jest-test-results.json';
+
+export const decorators = [
+  withTests({
+    results,
+  }),
+];
 
 export const parameters = {
   darkMode: {
