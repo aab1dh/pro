@@ -2,11 +2,9 @@ var path = require('path');
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
-    '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-viewport',
+    '@storybook/addon-links',
     '@storybook/addon-notes',
-    '@storybook/addon-controls',
     '@storybook/preset-scss',
     '@storybook/addon-a11y',
     '@hover/storybook-addon-pseudo-states',
