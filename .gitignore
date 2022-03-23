@@ -26,5 +26,4 @@ UserInterfaceState.xcuserstate
 src/stories
 storybook-static
 ssl
-.jest-test-results.json
 build-storybook.log
