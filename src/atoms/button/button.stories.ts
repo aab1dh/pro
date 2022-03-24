@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/restrict-template-expressions */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { action } from '@storybook/addon-actions';
 import readme from './readme.md';
 export default {
@@ -5,7 +7,13 @@ export default {
   parameters: {
     markdown: <Text>readme,
   },
+  argTypes: {
+    label: { control: 'text' },
+  },
 };
 
-// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-export const Button = () => `<pro-button ${(onclick = () => action('clicked')())}>Hello</pro-button>`;
+export const Button = (args: any) => `<pro-button ${(onclick = () => action('clicked')())}>${args.label}</pro-button>`;
+
+Button.args = {
+  label: 'Text button',
+};
