@@ -1,13 +1,11 @@
-// my-component.stories.js
+import { action } from '@storybook/addon-actions';
 import readme from './readme.md';
-
 export default {
   title: 'Atoms',
   parameters: {
-    markdown: <HTMLAllCollection>readme,
+    markdown: <Text>readme,
   },
 };
 
-export const Button = () => `
-  <pro-button first="Millie" middle="Bobby" last="Brown">Hello</pro-button>
-`;
+// eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+export const Button = () => `<pro-button ${(onclick = () => action('clicked')())}>Hello</pro-button>`;
