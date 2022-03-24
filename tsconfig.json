@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
     "lib": ["dom", "es2017"],
+    "types": ["node", "jest"],
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",

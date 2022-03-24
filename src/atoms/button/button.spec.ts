@@ -1,6 +1,5 @@
 import { newSpecPage } from '@stencil/core/testing';
 
-
 import { Button } from './button';
 
 describe('button', () => {
@@ -13,8 +12,7 @@ describe('button', () => {
     beforeEach(async () => {
       element = await newSpecPage({
         components: [Button],
-        html: '<button>'
-          + '</button>'
+        html: '<pro-button>' + '</pro-button>',
       });
     });
 

@@ -7,7 +7,7 @@ describe('my-component', () => {
       components: [ComponentGallery],
       html: '<component-gallery></component-gallery>',
     });
-    expect(root).toBeTruthy()
+    expect(root).toBeTruthy();
     // expect(root).toEqualHtml(`
     //   <my-component>
     //     <mock:shadow-root>
