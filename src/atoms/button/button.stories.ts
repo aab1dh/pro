@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/restrict-template-expressions */
-/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { action } from '@storybook/addon-actions';
 import readme from './readme.md';
 import ButtonDocs from './button.docs.mdx';
@@ -19,6 +19,9 @@ export default {
       type: 'figma',
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
+    actions: {
+      handles: ['click'],
+    },
   },
   argTypes: {
     label: { control: 'text' },
@@ -34,6 +37,7 @@ const Template = (args: typeof propTypes) =>
 export const Button = Template.bind({});
 
 Button.args = {
+  ...Button.args,
   label: 'Text button',
 };
 

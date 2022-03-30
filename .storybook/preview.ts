@@ -9,6 +9,8 @@ import { withTests } from '@storybook/addon-jest';
 import results from '../.jest-test-results.json';
 
 import { defineCustomElements } from '../dist/esm/loader';
+import { DocsPage, DocsContainer } from '@storybook/addon-docs';
+
 
 defineCustomElements();
 
@@ -19,7 +21,11 @@ export const decorators = [
 ];
 
 export const parameters = {
-  actions: { argTypesRegex: '^on[A-Z].*' },
+  docs: {
+    container: DocsContainer,
+    page: DocsPage,
+  },
+  // actions: { argTypesRegex: '^on.*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
