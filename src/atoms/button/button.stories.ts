@@ -2,10 +2,15 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { action } from '@storybook/addon-actions';
 import readme from './readme.md';
+import ButtonDocs from './button.docs.mdx';
 export default {
   title: 'Atoms',
   parameters: {
     markdown: <Text>readme,
+    notes: <Text>readme,
+    docs: {
+      page: ButtonDocs
+    }
   },
   argTypes: {
     label: { control: 'text' },
