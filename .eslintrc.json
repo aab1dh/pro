@@ -30,7 +30,8 @@
     // remove after https://github.com/ionic-team/stencil-eslint/pull/71 is merged into @stencil/eslint
     "@stencil/decorators-context": "warn",
     "react/jsx-no-bind": "warn",
-    "@stencil/strict-boolean-conditions": "warn"
+    "@stencil/strict-boolean-conditions": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn"
   },
   "overrides": [
     {
