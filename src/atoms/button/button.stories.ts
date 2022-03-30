@@ -20,7 +20,7 @@ export default {
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
     actions: {
-      handles: ['mouseover', 'click .btn'],
+      handles: ['click'],
     },
   },
   argTypes: {
@@ -29,8 +29,7 @@ export default {
 };
 
 const Template = (args: typeof propTypes) =>
-  `<pro-button ${{ ...args }} ${(onclick = () => action('clicked', { clearOnStoryChange: false })())}>${args.label
-  }</pro-button>`;
+  `<pro-button ${{ ...args }} ${(onclick = () => action('clicked')())}>${args.label}</pro-button>`;
 
 export const Button = Template.bind({});
 
