@@ -24,7 +24,7 @@ export default {
   },
 };
 
-const Template = args => `<pro-button ${{ ...args }} ${(onclick = () => action('clicked', { "clearOnStoryChange": true })())}>${args.label}</pro-button>`;
+const Template = args => `<pro-button ${{ ...args }} ${(onclick = () => action('clicked', { "clearOnStoryChange": false })())}>${args.label}</pro-button>`;
 
 
 export const Button = Template.bind({});
