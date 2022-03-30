@@ -9,7 +9,7 @@ export default {
     markdown: <Text>readme,
     notes: <Text>readme,
     docs: {
-      page: ButtonDocs
+      page: <Text>ButtonDocs
     }
   },
   argTypes: {
