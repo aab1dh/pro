@@ -13,6 +13,7 @@ module.exports = {
     '@washingtonpost/storybook-addon-web-vitals',
     '@storybook/addon-jest',
     'storybook-mobile',
+    'storybook-addon-designs',
     {
       name: '@storybook/addon-storysource',
       options: {
