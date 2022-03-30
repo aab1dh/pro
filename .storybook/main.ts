@@ -12,20 +12,19 @@ module.exports = {
     'storybook-addon-designs',
     '@washingtonpost/storybook-addon-web-vitals',
     '@storybook/addon-jest',
-    'storybook-mobile',
-    'storybook-addon-designs',
-    {
-      name: '@storybook/addon-storysource',
-      options: {
-        rule: {
-          // test: [/\.stories\.jsx?$/], This is default
-          include: [path.resolve(__dirname, '../src')], // You can specify directories
-        },
-        loaderOptions: {
-          prettierConfig: { printWidth: 80, singleQuote: false },
-        },
-      },
-    },
+    'storybook-mobile'
+    // {
+    //   name: '@storybook/addon-storysource',
+    //   options: {
+    //     rule: {
+    //       // test: [/\.stories\.jsx?$/], This is default
+    //       include: [path.resolve(__dirname, '../src')], // You can specify directories
+    //     },
+    //     loaderOptions: {
+    //       prettierConfig: { printWidth: 80, singleQuote: false },
+    //     },
+    //   },
+    // },
     // 'storybook-dark-mode/register', // turn off for custom theme
   ],
   framework: '@storybook/html',
