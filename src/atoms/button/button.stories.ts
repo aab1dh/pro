@@ -19,9 +19,10 @@ export default {
       type: 'figma',
       url: 'https://www.figma.com/file/LKQ4FJ4bTnCSjedbRpk931/Sample-File',
     },
-    actions: {
-      handles: ['click'],
-    },
+    //enable only for testing
+    // actions: {
+    //   handles: ['click'],
+    // },
   },
   argTypes: {
     label: { control: 'text' },
