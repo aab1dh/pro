@@ -4,7 +4,7 @@ module.exports = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-links',
-    '@storybook/addon-notes',
+    '@storybook/addon-notes/register-panel',
     '@storybook/preset-scss',
     '@storybook/addon-a11y',
     '@hover/storybook-addon-pseudo-states',
