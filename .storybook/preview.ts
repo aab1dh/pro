@@ -25,7 +25,7 @@ export const parameters = {
     container: DocsContainer,
     page: DocsPage,
   },
-  actions: { argTypesRegex: '^on.*' },
+  // actions: { argTypesRegex: '^on.*' },
   controls: {
     matchers: {
       color: /(background|color)$/i,
