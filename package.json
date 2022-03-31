@@ -15,14 +15,14 @@
     "loader/"
   ],
   "scripts": {
-    "build": "yarn lint && stencil build --docs",
-    "start:dev": "yarn lint && stencil build --dev --watch --serve",
-    "start:prod": "yarn lint && stencil build --watch --serve",
+    "build": "yarn lint && yarn test && stencil build --docs",
+    "start:dev": "yarn lint && yarn test && stencil build --dev --watch --serve",
+    "start:prod": "yarn lint && yarn test && stencil build --watch --serve",
     "generate": "stencil generate",
     "test": "stencil test --spec --e2e --json --outputFile=.jest-test-results.json || true",
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
-    "storybook": "yarn build && start-storybook -p 6006 -s ./src",
+    "storybook": "yarn build && yarn test && start-storybook -p 6006 -s ./src",
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
