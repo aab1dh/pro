@@ -6,6 +6,7 @@ import readme from './readme.md';
 import ButtonDocs from './button.docs.mdx';
 import { withDesign } from 'storybook-addon-designs';
 import PropTypes from 'prop-types';
+import { within, fireEvent } from '@storybook/testing-library';
 export default {
   title: 'Atoms',
   decorators: [withDesign],
@@ -36,6 +37,11 @@ export const Button = Template.bind({});
 
 Button.args = {
   label: 'Text button',
+};
+
+Button.play = async ({ canvasElement }) => {
+  const canvas = within(canvasElement);
+  await fireEvent.click(canvas.getByText('Text button'));
 };
 
 const propTypes = {
