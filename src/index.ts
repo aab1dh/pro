@@ -7,11 +7,7 @@ toggleDarkTheme(prefersDark.matches);
 
 // Add or remove the "dark" class based on if the media query matches
 function toggleDarkTheme(shouldAdd: boolean) {
-
   window.addEventListener('DOMContentLoaded', () => {
-
-    if (typeof window === 'object' && shouldAdd) document.body.classList?.toggle('dark', shouldAdd)
+    if (typeof window === 'object' && shouldAdd) document.body.classList?.toggle('dark', shouldAdd);
   });
-
-
 }

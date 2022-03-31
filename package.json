@@ -15,17 +15,18 @@
     "loader/"
   ],
   "scripts": {
-    "build": "yarn lint && yarn test && stencil build --docs",
-    "start:dev": "yarn lint && yarn test && stencil build --dev --watch --serve",
-    "start:prod": "yarn lint && yarn test && stencil build --watch --serve",
+    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs",
+    "start:dev": "yarn prettify && yarn lint && yarn test && stencil build --dev --watch --serve",
+    "start:prod": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
     "generate": "stencil generate",
     "test": "stencil test --spec --e2e --json --outputFile=.jest-test-results.json || true",
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
-    "storybook": "yarn build && yarn test && start-storybook -p 6006 -s ./src",
+    "storybook": "yarn build && start-storybook -p 6006 -s ./src",
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
+    "prettify": "prettier --config ./.prettierrc.json 'src/**/*.@(js|jsx|ts|tsx|mdx)' --write",
     "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>"
   },
   "dependencies": {

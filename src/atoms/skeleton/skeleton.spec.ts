@@ -11,8 +11,7 @@ describe('skeleton', () => {
     beforeEach(async () => {
       element = await newSpecPage({
         components: [Skeleton],
-        html: '<skeleton>'
-          + '</skeleton>'
+        html: '<skeleton>' + '</skeleton>',
       });
     });
 

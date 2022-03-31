@@ -1,4 +1,4 @@
-import { newSpecPage } from "@stencil/core/testing";
+import { newSpecPage } from '@stencil/core/testing';
 import { Image } from './image';
 
 describe('image', () => {
@@ -11,8 +11,7 @@ describe('image', () => {
     beforeEach(async () => {
       element = await newSpecPage({
         components: [Image],
-        html: '<pro-image>'
-          + '</pro-image>'
+        html: '<pro-image>' + '</pro-image>',
       });
     });
 

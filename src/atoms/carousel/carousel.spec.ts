@@ -11,8 +11,7 @@ describe('carousel', () => {
     beforeEach(async () => {
       element = await newSpecPage({
         components: [Carousel],
-        html: '<carousel>'
-          + '</carousel>'
+        html: '<carousel>' + '</carousel>',
       });
     });
 
