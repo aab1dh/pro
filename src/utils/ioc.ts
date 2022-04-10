@@ -1,5 +1,5 @@
-import { Container } from 'inversify';
 import 'reflect-metadata';
+import { Container } from 'inversify';
 import getDecorators from 'inversify-inject-decorators';
 import { Provider, AxiosProvider } from './axiosprovider';
 const container = new Container();

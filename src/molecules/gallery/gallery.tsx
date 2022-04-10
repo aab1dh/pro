@@ -13,7 +13,14 @@ export class ComponentGallery {
   // eslint-disable-next-line @stencil/no-unused-watch
   @Watch('title')
   watchStateHandler(newValue: boolean, oldValue: boolean) {
-    console.log('The new value of title is: ', newValue, oldValue);
+    console.log('Old value of title is: ', oldValue);
+    console.log('The new value of title is: ', newValue[0]?.title);
+    performance.mark('end');
+    performance.measure('measure', 'start', 'end');
+    console.log('Time to hydrate title', performance.getEntriesByType('measure')[0].duration);
+  }
+  connectedCallback() {
+    performance.mark('start');
   }
 
   async componentWillLoad() {
