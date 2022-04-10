@@ -1,4 +1,4 @@
-import { Component, Fragment, h } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'pro-skeleton',
@@ -8,9 +8,9 @@ import { Component, Fragment, h } from '@stencil/core';
 export class Skeleton {
   render() {
     return (
-      <Fragment>
+      <error-boundry>
         <div class="skeleton"></div>
-      </Fragment>
+      </error-boundry>
     ) as HTMLElement;
   }
 }

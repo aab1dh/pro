@@ -1,4 +1,4 @@
-import { Component, Fragment, h, State, Element, Prop } from '@stencil/core';
+import { Component, h, State, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'pro-img',
@@ -29,7 +29,7 @@ export class Image {
 
   render() {
     return (
-      <Fragment>
+      <error-boundry>
         {this.showImg === false && <pro-skeleton></pro-skeleton>}
         <img
           innerHTML={this.host.innerHTML}
@@ -40,7 +40,7 @@ export class Image {
           width={this.width}
           height={this.height}
         />
-      </Fragment>
+      </error-boundry>
     ) as HTMLElement;
   }
 }

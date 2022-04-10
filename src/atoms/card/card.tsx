@@ -1,4 +1,4 @@
-import { Component, Fragment, h, Prop } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'pro-card',
@@ -10,13 +10,13 @@ export class Card {
 
   render() {
     return (
-      <Fragment>
+      <error-boundry>
         <div class="card-container">
           <pro-img src={this.imgSrc}></pro-img>
 
           <pro-button>Like</pro-button>
         </div>
-      </Fragment>
+      </error-boundry>
     ) as HTMLElement;
   }
 }

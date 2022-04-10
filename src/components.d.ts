@@ -9,6 +9,8 @@ export namespace Components {
     interface ComponentGallery {
         "imgSrc": string;
     }
+    interface ErrorBoundry {
+    }
     interface ProButton {
         "styles": { [key: string]: string };
     }
@@ -31,6 +33,12 @@ declare global {
     var HTMLComponentGalleryElement: {
         prototype: HTMLComponentGalleryElement;
         new (): HTMLComponentGalleryElement;
+    };
+    interface HTMLErrorBoundryElement extends Components.ErrorBoundry, HTMLStencilElement {
+    }
+    var HTMLErrorBoundryElement: {
+        prototype: HTMLErrorBoundryElement;
+        new (): HTMLErrorBoundryElement;
     };
     interface HTMLProButtonElement extends Components.ProButton, HTMLStencilElement {
     }
@@ -64,6 +72,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "component-gallery": HTMLComponentGalleryElement;
+        "error-boundry": HTMLErrorBoundryElement;
         "pro-button": HTMLProButtonElement;
         "pro-card": HTMLProCardElement;
         "pro-carousel": HTMLProCarouselElement;
@@ -74,6 +83,8 @@ declare global {
 declare namespace LocalJSX {
     interface ComponentGallery {
         "imgSrc"?: string;
+    }
+    interface ErrorBoundry {
     }
     interface ProButton {
         "styles"?: { [key: string]: string };
@@ -92,6 +103,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "component-gallery": ComponentGallery;
+        "error-boundry": ErrorBoundry;
         "pro-button": ProButton;
         "pro-card": ProCard;
         "pro-carousel": ProCarousel;
@@ -104,6 +116,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "component-gallery": LocalJSX.ComponentGallery & JSXBase.HTMLAttributes<HTMLComponentGalleryElement>;
+            "error-boundry": LocalJSX.ErrorBoundry & JSXBase.HTMLAttributes<HTMLErrorBoundryElement>;
             "pro-button": LocalJSX.ProButton & JSXBase.HTMLAttributes<HTMLProButtonElement>;
             "pro-card": LocalJSX.ProCard & JSXBase.HTMLAttributes<HTMLProCardElement>;
             "pro-carousel": LocalJSX.ProCarousel & JSXBase.HTMLAttributes<HTMLProCarouselElement>;

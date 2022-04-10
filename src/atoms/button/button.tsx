@@ -1,4 +1,4 @@
-import { Component, Fragment, h, Element, Prop } from '@stencil/core';
+import { Component, h, Element, Prop } from '@stencil/core';
 
 @Component({
   tag: 'pro-button',
@@ -16,9 +16,9 @@ export class Button {
 
   render() {
     return (
-      <Fragment>
+      <error-boundry>
         <div innerHTML={this.host.innerHTML} style={this.styles} onClick={$event => this.handleClick($event)}></div>
-      </Fragment>
+      </error-boundry>
     ) as HTMLElement;
   }
 }

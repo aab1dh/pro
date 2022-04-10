@@ -1,4 +1,4 @@
-import { Component, Fragment, h, State } from '@stencil/core';
+import { Component, h, State } from '@stencil/core';
 
 @Component({
   tag: 'pro-carousel',
@@ -19,14 +19,14 @@ export class Carousel {
 
   render() {
     return (
-      <Fragment>
+      <error-boundry>
         <h2 class="carousel-heading">Adventure</h2>
         <span class="carousel-container">
           {[...(Array(25) as Array<HTMLElement>)].map(
             () => (<pro-card imgSrc={this.getSrc()}></pro-card>) as HTMLElement,
           )}
         </span>
-      </Fragment>
+      </error-boundry>
     ) as HTMLElement;
   }
 }
