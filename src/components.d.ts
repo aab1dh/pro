@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface ComponentGallery {
-        "imgSrc": string;
     }
     interface ErrorBoundry {
     }
@@ -82,7 +81,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface ComponentGallery {
-        "imgSrc"?: string;
     }
     interface ErrorBoundry {
     }

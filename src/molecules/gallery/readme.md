@@ -5,13 +5,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `imgSrc` | `img-src` |             | `string` | `undefined` |
-
-
 ## Dependencies
 
 ### Depends on

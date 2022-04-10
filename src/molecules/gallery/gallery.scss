@@ -5,4 +5,8 @@ component-gallery {
   overflow-x: hidden;
   content-visibility: auto;
   contain-intrinsic-size: 100vh;
+
+  h1 {
+    color: var(--pro-color-primary);
+  }
 }
