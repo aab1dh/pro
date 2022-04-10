@@ -1,6 +1,5 @@
 import { injectable } from 'inversify';
 import axios from 'axios';
-
 axios.defaults.timeout === 3000;
 
 export interface Provider<T> {
