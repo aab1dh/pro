@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import { newSpecPage } from '@stencil/core/testing';
 import { ComponentGallery } from './gallery';
 
