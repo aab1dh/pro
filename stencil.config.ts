@@ -23,6 +23,7 @@ export const config: Config = {
     {
       type: 'docs-readme',
     },
+    { type: 'dist-hydrate-script' },
     {
       type: 'www',
       baseUrl: 'https://localhost:4444/',
