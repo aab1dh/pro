@@ -10,6 +10,8 @@ export class Button {
 
   @Prop() styles: { [key: string]: string };
 
+  @Prop() name: string;
+
   private handleClick($event: Event) {
     console.log($event.target);
   }
@@ -17,7 +19,11 @@ export class Button {
   render() {
     return (
       <error-boundry>
-        <div innerHTML={this.host.innerHTML} style={this.styles} onClick={$event => this.handleClick($event)}></div>
+        <div
+          innerHTML={this.name ? 'Like ' + this.name.split('=')[1] : this.host.innerHTML}
+          style={this.styles}
+          onClick={$event => this.handleClick($event)}
+        ></div>
       </error-boundry>
     ) as HTMLElement;
   }

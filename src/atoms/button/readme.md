@@ -9,6 +9,7 @@
 
 | Property | Attribute | Description | Type                         | Default     |
 | -------- | --------- | ----------- | ---------------------------- | ----------- |
+| `name`   | `name`    |             | `string`                     | `undefined` |
 | `styles` | --        |             | `{ [key: string]: string; }` | `undefined` |
 
 

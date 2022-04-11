@@ -14,7 +14,7 @@ export class Card {
         <div class="card-container">
           <pro-img src={this.imgSrc}></pro-img>
 
-          <pro-button>Like</pro-button>
+          <pro-button name={this.imgSrc}>Like</pro-button>
         </div>
       </error-boundry>
     ) as HTMLElement;

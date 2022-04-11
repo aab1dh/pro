@@ -1,4 +1,4 @@
-import { Component, h, State } from '@stencil/core';
+import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'pro-carousel',
@@ -6,10 +6,6 @@ import { Component, h, State } from '@stencil/core';
   shadow: true,
 })
 export class Carousel {
-  @State() state: {
-    cards: ['card1', 'card2'];
-  };
-
   private getSrc() {
     const random = Math.ceil(Math.random() * (550 - 100) + 100);
     // const size = 300

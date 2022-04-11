@@ -11,6 +11,7 @@ export namespace Components {
     interface ErrorBoundry {
     }
     interface ProButton {
+        "name": string;
         "styles": { [key: string]: string };
     }
     interface ProCard {
@@ -85,6 +86,7 @@ declare namespace LocalJSX {
     interface ErrorBoundry {
     }
     interface ProButton {
+        "name"?: string;
         "styles"?: { [key: string]: string };
     }
     interface ProCard {
