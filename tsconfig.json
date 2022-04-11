@@ -9,7 +9,7 @@
     "emitDecoratorMetadata": true,
     "removeComments": true,
     "lib": ["dom", "es2017"],
-    "types": ["node", "jest", "reflect-metadata"],
+    "types": ["node", "jest"],
     "moduleResolution": "node",
     "module": "esnext",
     "target": "es2017",

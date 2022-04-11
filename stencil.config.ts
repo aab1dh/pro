@@ -25,6 +25,7 @@ export const config: Config = {
     },
     {
       type: 'www',
+      baseUrl: 'https://localhost:4444/',
       serviceWorker: null, // disable service workers
     },
   ], plugins: [

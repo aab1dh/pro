@@ -1,14 +1,12 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Component, h, State, Watch } from '@stencil/core';
-import { lazyInject } from '../../utils/ioc';
-import { Provider } from '../../utils/axiosprovider';
+import { AxiosProvider } from '../../utils/axiosprovider';
 @Component({
   tag: 'component-gallery',
   styleUrl: 'gallery.scss',
   shadow: false,
 })
 export class ComponentGallery {
-  @lazyInject('axiosProvider') private readonly axiosProvider: Provider<string>;
   @State() title;
   // eslint-disable-next-line @stencil/no-unused-watch
   @Watch('title')
@@ -17,7 +15,7 @@ export class ComponentGallery {
     console.log('The new value of title is: ', newValue[0]?.title);
     performance.mark('end');
     performance.measure('measure', 'start', 'end');
-    console.log('Time to hydrate title', performance.getEntriesByType('measure')[0].duration);
+    console.log('Time to hydrate title', performance.getEntriesByType('measure'));
   }
   connectedCallback() {
     performance.mark('start');
@@ -25,7 +23,8 @@ export class ComponentGallery {
 
   async componentWillLoad() {
     // eslint-disable-next-line @typescript-eslint/await-thenable
-    this.title = await this.axiosProvider.provide();
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    this.title = await new AxiosProvider().provide();
   }
   render() {
     return (
@@ -33,7 +32,7 @@ export class ComponentGallery {
         {/* <div>Hello, World! I'm {this.getText()}</div> */}
         {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
         {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
-        <h1>Hello {this.title[0]?.title}!</h1>
+        <h1>Hello {this.title ? this.title['0']?.title : ''}!</h1>
         {[...(Array(40) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
       </error-boundry>
     ) as HTMLElement;

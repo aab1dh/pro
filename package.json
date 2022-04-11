@@ -15,9 +15,9 @@
     "loader/"
   ],
   "scripts": {
-    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs",
+    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs --prerender",
     "start:dev": "yarn prettify && yarn lint && yarn test && stencil build --dev --watch --serve",
-    "start:prod": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
+    "start": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
     "generate": "stencil generate",
     "test": "stencil test --spec --e2e --json --outputFile=.jest-test-results.json || true",
     "test.watch": "stencil test --spec --watchAll",
@@ -30,11 +30,7 @@
     "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>"
   },
   "dependencies": {
-    "@stencil/core": "^2.14.2",
-    "axios": "^0.26.1",
-    "inversify": "^6.0.1",
-    "inversify-inject-decorators": "^3.1.0",
-    "reflect-metadata": "^0.1.13"
+    "@stencil/core": "^2.14.2"
   },
   "license": "MIT",
   "devDependencies": {
