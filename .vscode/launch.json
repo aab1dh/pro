@@ -1,5 +1,19 @@
 {
+  "version": "0.2.0",
   "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Prerender",
+      "args": [
+        "${workspaceFolder}/node_modules/@stencil/core/bin/stencil",
+        "prerender",
+        "${workspaceFolder}/dist/hydrate/index.js",
+        "--max-workers=0",
+        "--config=${workspaceFolder}/stencil.config.ts"
+      ],
+      "protocol": "inspector",
+    },
     {
       "type": "node",
       "request": "launch",

@@ -2,6 +2,9 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 // import { readFileSync } from 'fs';
 export const config: Config = {
+  namespace: "Pro",
+  invisiblePrehydration: true,
+  hashFileNames: false,
   devServer: {
     reloadStrategy: 'pageReload',
     port: 4444,
@@ -11,7 +14,6 @@ export const config: Config = {
     //   key: readFileSync('./ssl/dev.local.key', 'utf8')
     // }
   },
-  namespace: 'pro',
   outputTargets: [
     {
       type: 'dist',
@@ -27,6 +29,7 @@ export const config: Config = {
     {
       type: 'www',
       baseUrl: 'https://localhost:4444/',
+      prerenderConfig: './prerender.config.ts',
       serviceWorker: null, // disable service workers
     },
   ], plugins: [

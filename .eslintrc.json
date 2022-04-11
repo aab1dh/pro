@@ -55,5 +55,5 @@
       }
     }
   ],
-  "ignorePatterns": ["dist/", "loader/", "www/", "node_modules/", "src/serviceWorker.ts"]
+  "ignorePatterns": ["dist/", "loader/", "www/", "node_modules/", "src/serviceWorker.ts", "prerender.config.ts"]
 }
