@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface AppRoot {
+    }
     interface ComponentGallery {
     }
     interface ErrorBoundry {
@@ -28,6 +30,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    }
+    var HTMLAppRootElement: {
+        prototype: HTMLAppRootElement;
+        new (): HTMLAppRootElement;
+    };
     interface HTMLComponentGalleryElement extends Components.ComponentGallery, HTMLStencilElement {
     }
     var HTMLComponentGalleryElement: {
@@ -71,6 +79,7 @@ declare global {
         new (): HTMLProSkeletonElement;
     };
     interface HTMLElementTagNameMap {
+        "app-root": HTMLAppRootElement;
         "component-gallery": HTMLComponentGalleryElement;
         "error-boundry": HTMLErrorBoundryElement;
         "pro-button": HTMLProButtonElement;
@@ -81,6 +90,8 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface AppRoot {
+    }
     interface ComponentGallery {
     }
     interface ErrorBoundry {
@@ -102,6 +113,7 @@ declare namespace LocalJSX {
     interface ProSkeleton {
     }
     interface IntrinsicElements {
+        "app-root": AppRoot;
         "component-gallery": ComponentGallery;
         "error-boundry": ErrorBoundry;
         "pro-button": ProButton;
@@ -115,6 +127,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "component-gallery": LocalJSX.ComponentGallery & JSXBase.HTMLAttributes<HTMLComponentGalleryElement>;
             "error-boundry": LocalJSX.ErrorBoundry & JSXBase.HTMLAttributes<HTMLErrorBoundryElement>;
             "pro-button": LocalJSX.ProButton & JSXBase.HTMLAttributes<HTMLProButtonElement>;

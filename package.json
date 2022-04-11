@@ -76,6 +76,7 @@
     "prettier": "^2.6.0",
     "puppeteer": "^13.5.1",
     "sass-loader": "^12.6.0",
+    "stencil-router-v2": "^0.6.0",
     "storybook-addon-designs": "^6.2.1",
     "storybook-dark-mode": "^1.0.9",
     "storybook-mobile": "^1.0.0",

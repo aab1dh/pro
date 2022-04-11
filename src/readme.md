@@ -1,4 +1,4 @@
-# my-component
+# app-root
 
 
 
@@ -7,18 +7,14 @@
 
 ## Dependencies
 
-### Used by
-
- - [app-root](../..)
-
 ### Depends on
 
-- [error-boundry](../../utils)
-- [pro-carousel](../../atoms/carousel)
+- [component-gallery](./molecules/gallery)
 
 ### Graph
 ```mermaid
 graph TD;
+  app-root --> component-gallery
   component-gallery --> error-boundry
   component-gallery --> pro-carousel
   pro-carousel --> error-boundry
@@ -30,8 +26,7 @@ graph TD;
   pro-img --> pro-skeleton
   pro-skeleton --> error-boundry
   pro-button --> error-boundry
-  app-root --> component-gallery
-  style component-gallery fill:#f9f,stroke:#333,stroke-width:4px
+  style app-root fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------
