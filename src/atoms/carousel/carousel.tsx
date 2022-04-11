@@ -18,7 +18,7 @@ export class Carousel {
       <error-boundry>
         <h2 class="carousel-heading">Adventure</h2>
         <span class="carousel-container">
-          {[...(Array(25) as Array<HTMLElement>)].map(
+          {[...(Array(15) as Array<HTMLElement>)].map(
             () => (<pro-card imgSrc={this.getSrc()}></pro-card>) as HTMLElement,
           )}
         </span>

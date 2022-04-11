@@ -9,7 +9,7 @@ export class Skeleton {
   render() {
     return (
       <error-boundry>
-        <div class="skeleton"></div>
+        <div style={{ width: '200px', height: '200px' }} class="skeleton"></div>
       </error-boundry>
     ) as HTMLElement;
   }

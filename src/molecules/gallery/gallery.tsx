@@ -33,7 +33,7 @@ export class ComponentGallery {
         {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
         {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
         <h1>Hello {this.title ? this.title['0']?.title : ''}!</h1>
-        {[...(Array(40) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
+        {[...(Array(5) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
       </error-boundry>
     ) as HTMLElement;
   }
