@@ -19,14 +19,9 @@
 
  - [pro-card](../card)
 
-### Depends on
-
-- [error-boundry](../../utils)
-
 ### Graph
 ```mermaid
 graph TD;
-  pro-button --> error-boundry
   pro-card --> pro-button
   style pro-button fill:#f9f,stroke:#333,stroke-width:4px
 ```

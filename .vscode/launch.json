@@ -8,7 +8,7 @@
       "args": [
         "${workspaceFolder}/node_modules/@stencil/core/bin/stencil",
         "prerender",
-        "${workspaceFolder}/dist/hydrate/index.js",
+        "${workspaceFolder}/hydrate/index.js",
         "--max-workers=0",
         "--config=${workspaceFolder}/stencil.config.ts"
       ],

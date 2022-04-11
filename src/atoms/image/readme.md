@@ -22,15 +22,12 @@
 
 ### Depends on
 
-- [error-boundry](../../utils)
 - [pro-skeleton](../skeleton)
 
 ### Graph
 ```mermaid
 graph TD;
-  pro-img --> error-boundry
   pro-img --> pro-skeleton
-  pro-skeleton --> error-boundry
   pro-card --> pro-img
   style pro-img fill:#f9f,stroke:#333,stroke-width:4px
 ```

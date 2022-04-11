@@ -18,13 +18,11 @@ export class Button {
 
   render() {
     return (
-      <error-boundry>
-        <div
-          innerHTML={this.name ? 'Like ' + this.name.split('=')[1] : this.host.innerHTML}
-          style={this.styles}
-          onClick={$event => this.handleClick($event)}
-        ></div>
-      </error-boundry>
+      <div
+        innerHTML={this.name ? 'Like ' + this.name.split('=')[1] : this.host.innerHTML}
+        style={this.styles}
+        onClick={$event => this.handleClick($event)}
+      ></div>
     ) as HTMLElement;
   }
 }

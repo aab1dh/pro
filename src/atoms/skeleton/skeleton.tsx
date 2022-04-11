@@ -7,10 +7,6 @@ import { Component, h } from '@stencil/core';
 })
 export class Skeleton {
   render() {
-    return (
-      <error-boundry>
-        <div style={{ width: '200px', height: '200px' }} class="skeleton"></div>
-      </error-boundry>
-    ) as HTMLElement;
+    return (<div style={{ width: '200px', height: '200px' }} class="skeleton"></div>) as HTMLElement;
   }
 }

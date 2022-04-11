@@ -24,7 +24,9 @@ export class AppRoot {
       <Host>
         <Router.Switch>
           <Route path="/">
-            <component-gallery></component-gallery>
+            <error-boundry>
+              <component-gallery></component-gallery>
+            </error-boundry>
           </Route>
 
           {/* <Route path={/^\/account/}>

@@ -10,13 +10,11 @@ export class Card {
 
   render() {
     return (
-      <error-boundry>
-        <div class="card-container">
-          <pro-img src={this.imgSrc}></pro-img>
+      <div class="card-container">
+        <pro-img src={this.imgSrc}></pro-img>
 
-          <pro-button name={this.imgSrc}></pro-button>
-        </div>
-      </error-boundry>
+        <pro-button name={this.imgSrc}></pro-button>
+      </div>
     ) as HTMLElement;
   }
 }

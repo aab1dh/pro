@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
-import { Component, h, State, Watch } from '@stencil/core';
+import { Component, h, State, Watch, Fragment } from '@stencil/core';
 import { AxiosProvider } from '../../utils/axiosprovider';
 @Component({
   tag: 'component-gallery',
@@ -28,13 +28,13 @@ export class ComponentGallery {
   }
   render() {
     return (
-      <error-boundry>
+      <Fragment>
         {/* <div>Hello, World! I'm {this.getText()}</div> */}
         {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
         {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
         <h1>Hello {this.title ? this.title['0']?.title : ''}!</h1>
         {[...(Array(5) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
-      </error-boundry>
+      </Fragment>
     ) as HTMLElement;
   }
 }

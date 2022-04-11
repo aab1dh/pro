@@ -4,7 +4,8 @@ import { sass } from '@stencil/sass';
 export const config: Config = {
   namespace: "Pro",
   invisiblePrehydration: true,
-  hashFileNames: false,
+  hashFileNames: true,
+  sourceMap: false,
   devServer: {
     reloadStrategy: 'pageReload',
     port: 4444,
