@@ -27,6 +27,10 @@ export namespace Components {
         "width": number;
     }
     interface ProSkeleton {
+        "height": number;
+        "position": string;
+        "width": number;
+        "zIndex": number;
     }
 }
 declare global {
@@ -111,6 +115,10 @@ declare namespace LocalJSX {
         "width"?: number;
     }
     interface ProSkeleton {
+        "height"?: number;
+        "position"?: string;
+        "width"?: number;
+        "zIndex"?: number;
     }
     interface IntrinsicElements {
         "app-root": AppRoot;

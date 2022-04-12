@@ -32,6 +32,11 @@ export const config: Config = {
       baseUrl: 'https://localhost:4444/',
       prerenderConfig: './prerender.config.ts',
       serviceWorker: null, // disable service workers
+      // serviceWorker: {
+      //   globPatterns: [
+      //     '**/*.{js,css,json,html,ico,png,jpg,jpeg}'
+      //   ]
+      // },
     },
   ], plugins: [
     sass({

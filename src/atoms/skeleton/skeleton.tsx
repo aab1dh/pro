@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'pro-skeleton',
@@ -6,7 +6,21 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class Skeleton {
+  @Prop() height: number;
+  @Prop() width: number;
+  @Prop() position: string;
+  @Prop() zIndex: number;
   render() {
-    return (<div style={{ width: '200px', height: '200px' }} class="skeleton"></div>) as HTMLElement;
+    return (
+      <div
+        style={{
+          width: `${this.width}px`,
+          height: `${this.height}px`,
+          position: `${this.position}`,
+          zIndex: `${this.zIndex}`,
+        }}
+        class="skeleton"
+      ></div>
+    ) as HTMLElement;
   }
 }

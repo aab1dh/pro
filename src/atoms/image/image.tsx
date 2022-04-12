@@ -30,7 +30,7 @@ export class Image {
   render() {
     return (
       <Fragment>
-        {this.showImg === false && <pro-skeleton></pro-skeleton>}
+        {this.showImg === false && <pro-skeleton width={200} height={200}></pro-skeleton>}
         <img
           innerHTML={this.host.innerHTML}
           style={{ ['visibility']: 'hidden' }}
