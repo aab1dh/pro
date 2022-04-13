@@ -16,7 +16,7 @@ jobs:
         run: yarn
 
       - name: Generate your awesome content
-        run: yarn prerender:ci
+        run: yarn prerender
 
       - name: Publish generated content to GitHub Pages
         uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
