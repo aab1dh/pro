@@ -17,7 +17,6 @@
   "scripts": {
     "build": "yarn prettify && yarn lint && yarn test && stencil build --docs",
     "prerender": "yarn prettify && yarn lint && yarn test && stencil build --dev --prerender",
-    "prerender:ci": "yarn lint && yarn test && stencil build --dev --prerender",
     "start:dev": "yarn prettify && yarn lint && yarn test && stencil build --dev --watch --serve",
     "start": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
     "generate": "stencil generate",
