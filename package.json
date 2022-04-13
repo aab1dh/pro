@@ -27,7 +27,7 @@
     "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
-    "prettify": "prettier --config ./.prettierrc.json 'src/**/*.@(js|jsx|ts|tsx|mdx)' --write",
+    "prettify": "yarn prettier --config ./.prettierrc.json 'src/**/*.@(js|jsx|ts|tsx|mdx)' --write",
     "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>"
   },
   "dependencies": {
