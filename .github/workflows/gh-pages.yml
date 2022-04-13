@@ -16,10 +16,11 @@ jobs:
         run: yarn
 
       - name: Generate your awesome content
-        run: yarn prerender
+        run: yarn prerender:ci
 
       - name: Publish generated content to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
         with:
-          github_token: ${{ secrets.PAGES_ACCESS_TOKEN }}
-          publish_dir: ./www
+          dir: www
+          branch: gh-pages
+          token: ${{ secrets.PAGES_ACCESS_TOKEN }}
