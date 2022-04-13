@@ -29,9 +29,9 @@ export const config: Config = {
     { type: 'dist-hydrate-script' },
     {
       type: 'www',
-      baseUrl: 'https://prodevsca.github.io/',
+      baseUrl: 'https://prodevsca.github.io/pro/',
       prerenderConfig: './prerender.config.ts',
-      buildDir: '',
+      buildDir: './',
       serviceWorker: null, // disable service workers
       // serviceWorker: {
       //   globPatterns: [
