@@ -1,3 +1,4 @@
+import { fetch } from './fetch';
 export interface Provider<T> {
   provide(): T;
 }
