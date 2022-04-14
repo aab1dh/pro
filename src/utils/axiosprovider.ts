@@ -12,7 +12,8 @@ export class AxiosProvider implements Provider<any> {
       const res = await fetch(url);
       return await res.json();
     } catch (error) {
-      console.log(error);
+      console.error(error);
+      throw error;
     }
   }
 }
