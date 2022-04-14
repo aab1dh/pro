@@ -1,4 +1,5 @@
 import { fetch } from './fetch';
+import { get, set } from './store';
 export interface Provider<T> {
   provide(): T;
 }
@@ -10,7 +11,8 @@ export class AxiosProvider implements Provider<any> {
     const url = 'https://jsonplaceholder.typicode.com/posts';
     try {
       const res = await fetch(url);
-      return await res.json();
+      set('posts', await res.json());
+      return get('posts');
     } catch (error) {
       console.error(error);
       throw error;
