@@ -26,6 +26,10 @@ export namespace Components {
         "src": string;
         "width": number;
     }
+    interface ProSeo {
+        "seoDescription": string;
+        "seoTitle": string;
+    }
     interface ProSkeleton {
         "height": number;
         "position": string;
@@ -76,6 +80,12 @@ declare global {
         prototype: HTMLProImgElement;
         new (): HTMLProImgElement;
     };
+    interface HTMLProSeoElement extends Components.ProSeo, HTMLStencilElement {
+    }
+    var HTMLProSeoElement: {
+        prototype: HTMLProSeoElement;
+        new (): HTMLProSeoElement;
+    };
     interface HTMLProSkeletonElement extends Components.ProSkeleton, HTMLStencilElement {
     }
     var HTMLProSkeletonElement: {
@@ -90,6 +100,7 @@ declare global {
         "pro-card": HTMLProCardElement;
         "pro-carousel": HTMLProCarouselElement;
         "pro-img": HTMLProImgElement;
+        "pro-seo": HTMLProSeoElement;
         "pro-skeleton": HTMLProSkeletonElement;
     }
 }
@@ -114,6 +125,10 @@ declare namespace LocalJSX {
         "src"?: string;
         "width"?: number;
     }
+    interface ProSeo {
+        "seoDescription"?: string;
+        "seoTitle"?: string;
+    }
     interface ProSkeleton {
         "height"?: number;
         "position"?: string;
@@ -128,6 +143,7 @@ declare namespace LocalJSX {
         "pro-card": ProCard;
         "pro-carousel": ProCarousel;
         "pro-img": ProImg;
+        "pro-seo": ProSeo;
         "pro-skeleton": ProSkeleton;
     }
 }
@@ -142,6 +158,7 @@ declare module "@stencil/core" {
             "pro-card": LocalJSX.ProCard & JSXBase.HTMLAttributes<HTMLProCardElement>;
             "pro-carousel": LocalJSX.ProCarousel & JSXBase.HTMLAttributes<HTMLProCarouselElement>;
             "pro-img": LocalJSX.ProImg & JSXBase.HTMLAttributes<HTMLProImgElement>;
+            "pro-seo": LocalJSX.ProSeo & JSXBase.HTMLAttributes<HTMLProSeoElement>;
             "pro-skeleton": LocalJSX.ProSkeleton & JSXBase.HTMLAttributes<HTMLProSkeletonElement>;
         }
     }

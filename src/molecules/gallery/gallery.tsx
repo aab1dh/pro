@@ -29,6 +29,7 @@ export class ComponentGallery {
   render() {
     return (
       <Fragment>
+        <pro-seo seoTitle="Gallery" seoDescription="This is a Gallery"></pro-seo>
         {/* <div>Hello, World! I'm {this.getText()}</div> */}
         {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
         {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
