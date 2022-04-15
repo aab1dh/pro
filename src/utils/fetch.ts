@@ -1,9 +1,11 @@
+import { Build } from '@stencil/core';
 const { fetch: originalFetch } = window;
 export const fetch = (window.fetch = async (...args) => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   const [resource, config, timeout = 8000] = args;
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), timeout);
+  let timeoutId;
+  if (Build.isBrowser) timeoutId = setTimeout(() => controller.abort(), timeout);
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   const response = await originalFetch(resource, { ...config, signal: controller.signal });
 
@@ -27,6 +29,7 @@ export const fetch = (window.fetch = async (...args) => {
 
   // response.json = json;
 
-  clearTimeout(timeoutId);
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  if (Build.isBrowser) clearTimeout(timeoutId);
   return response;
 });

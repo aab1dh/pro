@@ -1,11 +1,11 @@
 import { fetch } from './fetch';
 import { get, set } from './store';
 export interface Provider<T> {
-  provide(): T;
+  get(): T;
 }
 
-export class AxiosProvider implements Provider<any> {
-  async provide() {
+export class FetchProvider implements Provider<any> {
+  async get() {
     const controller = new AbortController();
 
     // 5 second timeout:

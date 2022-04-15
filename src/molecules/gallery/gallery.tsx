@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Component, h, State, Watch, Fragment } from '@stencil/core';
-import { AxiosProvider } from '../../utils/axiosprovider';
+import { FetchProvider } from '../../utils/fetchprovider';
 @Component({
   tag: 'component-gallery',
   styleUrl: 'gallery.scss',
@@ -24,7 +24,7 @@ export class ComponentGallery {
   async componentWillLoad() {
     // eslint-disable-next-line @typescript-eslint/await-thenable
     // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-    this.title = await new AxiosProvider().provide();
+    this.title = await new FetchProvider().get();
   }
   render() {
     return (
