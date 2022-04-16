@@ -23,13 +23,13 @@ jobs:
         uses: crazy-max/ghaction-github-status@v2
         with:
           pages_threshold: major_outage
-      -
-        name: Deploy to GitHub Pages
-        if: success()
-        uses: crazy-max/ghaction-github-pages@v2
-        with:
-          target_branch: gh-pages
-          build_dir: apps/app/www
-          jekyll: false
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v2
         env:
-          GITHUB_TOKEN: ${{ secrets.PAGES_ACCESS_TOKEN }}
+          ACTIONS_DEPLOY_KEY: ${{ secrets.PAGES_ACCESS_TOKEN }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
+        with:
+          keepFiles: true
+
