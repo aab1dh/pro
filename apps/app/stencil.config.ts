@@ -31,7 +31,7 @@ export const config: Config = {
       type: 'www',
       baseUrl: 'https://prodevsca.github.io/',
       prerenderConfig: './prerender.config.ts',
-      // buildDir: '',
+      // buildDir: 'build',
       // dir: 'www',
       serviceWorker: null, // disable service workers
       // serviceWorker: {
@@ -40,7 +40,8 @@ export const config: Config = {
       //   ]
       // },
       copy: [
-        { src: '.nojekyll' }
+        { src: '.nojekyll' },
+        { src: 'assets' }
       ]
     },
   ], plugins: [
