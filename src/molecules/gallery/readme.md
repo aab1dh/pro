@@ -13,11 +13,13 @@
 
 ### Depends on
 
+- [pro-seo](../../utils)
 - [pro-carousel](../../atoms/carousel)
 
 ### Graph
 ```mermaid
 graph TD;
+  component-gallery --> pro-seo
   component-gallery --> pro-carousel
   pro-carousel --> pro-card
   pro-card --> pro-img

@@ -1,4 +1,3 @@
-// const { onerror: originalOnError } = window;
 /* eslint-disable @typescript-eslint/restrict-plus-operands */
 const errorHandler = e => {
   // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access

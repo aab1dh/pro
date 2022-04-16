@@ -5,17 +5,25 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property         | Attribute         | Description | Type     | Default     |
+| ---------------- | ----------------- | ----------- | -------- | ----------- |
+| `seoDescription` | `seo-description` |             | `string` | `undefined` |
+| `seoTitle`       | `seo-title`       |             | `string` | `undefined` |
+
+
 ## Dependencies
 
 ### Used by
 
- - [app-root](..)
+ - [component-gallery](../molecules/gallery)
 
 ### Graph
 ```mermaid
 graph TD;
-  app-root --> error-boundry
-  style error-boundry fill:#f9f,stroke:#333,stroke-width:4px
+  component-gallery --> pro-seo
+  style pro-seo fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

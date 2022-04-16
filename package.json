@@ -15,8 +15,8 @@
     "loader/"
   ],
   "scripts": {
-    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs",
-    "prerender": "yarn prettify && yarn lint && yarn test && stencil build --dev --prerender",
+    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs && yarn sonar",
+    "prerender": "yarn prettify && yarn lint && yarn test && stencil build --docs --dev --prerender",
     "start:dev": "yarn prettify && yarn lint && yarn test && stencil build --dev --watch --serve",
     "start": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
     "generate": "stencil generate",
@@ -28,7 +28,8 @@
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
     "prettify": "prettier --config ./.prettierrc.json 'src/**/*.@(js|jsx|ts|tsx|mdx)' --write",
-    "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>"
+    "chromatic": "npx chromatic --project-token <CHROMATIC_PROJECT_TOKEN>",
+    "sonar": "docker-compose up -D && sonar-scanner   -D sonar.projectKey=pro-framework   -D sonar.sources=.   -D sonar.host.url=http://localhost:9000   -D sonar.login=aeed4ab9d33da44279d6baab58dbc4611c5df5ed"
   },
   "dependencies": {
     "@stencil/core": "^2.14.2"
@@ -78,6 +79,7 @@
     "prettier": "^2.6.0",
     "puppeteer": "^13.5.1",
     "sass-loader": "^12.6.0",
+    "sonarqube-scanner": "^2.8.1",
     "stencil-router-v2": "^0.6.0",
     "storybook-addon-designs": "^6.2.1",
     "storybook-dark-mode": "^1.0.9",

@@ -12,7 +12,6 @@ export class Card {
     return (
       <div class="card-container">
         <pro-img src={this.imgSrc}></pro-img>
-
         <pro-button name={this.imgSrc}></pro-button>
       </div>
     ) as HTMLElement;

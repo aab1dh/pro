@@ -29,9 +29,6 @@ export class ComponentGallery {
     return (
       <Fragment>
         <pro-seo seoTitle={translation.gallery.seoTitle} seoDescription={translation.gallery.seoDescription}></pro-seo>
-        {/* <div>Hello, World! I'm {this.getText()}</div> */}
-        {/* <pro-button>{this.open ? "On" : "Off"}</pro-button> */}
-        {/* <pro-button styles={{['color']:'black', ['background']:'white'}}>Hello</pro-button> */}
         <h1>Hello {this.title ? this.title['0']?.title : ''}!</h1>
         {[...(Array(15) as Array<HTMLElement>)].map(() => (<pro-carousel></pro-carousel>) as HTMLElement)}
       </Fragment>

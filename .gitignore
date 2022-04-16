@@ -28,3 +28,5 @@ storybook-static
 ssl
 build-storybook.log
 hydrate
+.scannerwork
+sonarqube/data

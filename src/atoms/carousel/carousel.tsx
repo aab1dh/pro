@@ -8,8 +8,6 @@ import { Component, h, Fragment } from '@stencil/core';
 export class Carousel {
   private getSrc() {
     const random = Math.ceil(Math.random() * (550 - 100) + 100);
-    // const size = 300
-    // return `https://picsum.photos/${size}?random=1`
     return `https://picsum.photos/200?random=${random}`;
   }
 
