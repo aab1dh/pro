@@ -39,6 +39,9 @@ export const config: Config = {
       //     '**/*.{js,css,json,html,ico,png,jpg,jpeg}'
       //   ]
       // },
+      copy: [
+        { src: '.nojekyll' }
+      ]
     },
   ], plugins: [
     sass({
@@ -49,5 +52,5 @@ export const config: Config = {
         'src/styles/animations.scss' //namespace defaults to 'animations',
       ]
     })
-  ]
+  ],
 };
