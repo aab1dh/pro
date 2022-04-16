@@ -9,7 +9,7 @@
 
 ### Depends on
 
-- [error-boundry](../../../packages/utils)
+- [error-boundry](common)
 - [component-gallery](./molecules/gallery)
 
 ### Graph

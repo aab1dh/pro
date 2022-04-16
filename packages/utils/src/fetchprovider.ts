@@ -1,10 +1,8 @@
 import { fetch } from './fetch';
 import { get, set } from './store';
-export interface Provider<T> {
-  get(): T;
-}
 
-export class FetchProvider implements Provider<any> {
+
+export class FetchProvider {
   async get() {
     const controller = new AbortController();
 
@@ -24,3 +22,4 @@ export class FetchProvider implements Provider<any> {
     }
   }
 }
+

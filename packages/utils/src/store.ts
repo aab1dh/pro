@@ -1,6 +1,6 @@
-import { createStore } from '@stencil/store';
+import { createStore } from "@stencil/store";
 
-const store = createStore({
+export const store = createStore({
   error: null,
 });
 

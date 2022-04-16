@@ -13,7 +13,7 @@
 
 ### Depends on
 
-- [pro-seo](../../../../../packages/utils)
+- [pro-seo](../../common)
 - [pro-carousel](../../atoms/carousel)
 
 ### Graph

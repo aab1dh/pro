@@ -1,7 +1,7 @@
 import { Component, h, Host } from '@stencil/core';
 import { createRouter, Route } from 'stencil-router-v2';
 const Router = createRouter();
-import { registerGlobalErrorHandler } from '../../../packages/utils/globalerrorhandler';
+import { registerGlobalErrorHandler } from 'utils';
 // eslint-disable-next-line @typescript-eslint/no-unsafe-call
 registerGlobalErrorHandler();
 let prefersDark: MediaQueryList;

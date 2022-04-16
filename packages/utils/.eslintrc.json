@@ -1,0 +1,65 @@
+{
+  "root": false,
+  "env": {
+    "jasmine": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": ["./tsconfig.json"]
+  },
+  "extends": [
+    "plugin:@stencil/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "jasmine"],
+  "rules": {
+    // remove no-unused-watch after https://github.com/ionic-team/stencil-eslint/pull/71 is merged into @stencil/eslint
+    "@stencil/no-unused-watch": "warn",
+    "@stencil/decorators-context": "warn",
+    "react/jsx-no-bind": "warn",
+    "@stencil/strict-boolean-conditions": "warn",
+    "@typescript-eslint/no-unsafe-assignment": "warn",
+    "@typescript-eslint/await-thenable": "warn",
+    "@typescript-eslint/no-unsafe-member-access": "warn",
+    "@stencil/own-methods-must-be-private": "warn",
+    "@typescript-eslint/no-unsafe-return": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"], // Your TypeScript files extension
+
+      // As mentioned in the comments, you should extend TypeScript plugins here,
+      // instead of extending them outside the `overrides`.
+      // If you don"t want to extend any rules, you don"t need an `extends` attribute.
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+
+      "parserOptions": {
+        "project": ["./tsconfig.json"] // Specify it only for TypeScript files
+      }
+    },
+    {
+      "files": ["**/*.tsx"],
+      "rules": {
+        "react/prop-types": "off"
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
+  "ignorePatterns": ["dist/", "loader/", "www/", "node_modules/", "src/serviceWorker.ts", "prerender.config.ts"]
+}

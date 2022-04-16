@@ -1,4 +1,4 @@
-# error-boundry
+# pro-seo
 
 
 
@@ -17,7 +17,7 @@
 
 ### Used by
 
- - [component-gallery](../../apps/app/src/molecules/gallery)
+ - [component-gallery](../molecules/gallery)
 
 ### Graph
 ```mermaid

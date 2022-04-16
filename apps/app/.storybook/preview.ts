@@ -47,7 +47,11 @@ const COLLECTIONS = [
     name: 'Molecules',
     componentsCtx: require.context('../dist/collection', true, /\/molecules\/([^/]+)\/\1\.js$/),
     storiesCtx: require.context('../src/molecules', true, /\.stories\.ts$/),
-  },
+  }, {
+    name: 'Common',
+    componentsCtx: require.context('../dist/collection', true, /\/common\/([^/]+)\/\1\.js$/),
+    storiesCtx: require.context('../src/common', true, /\.stories\.ts$/),
+  }
 ];
 
 function loadStories() {
