@@ -1,7 +1,8 @@
 import { Component, h, Host } from '@stencil/core';
 import { createRouter, Route } from 'stencil-router-v2';
 const Router = createRouter();
-import { registerGlobalErrorHandler } from './utils/globalerrorhandler';
+import { registerGlobalErrorHandler } from '../../../packages/utils/globalerrorhandler';
+// eslint-disable-next-line @typescript-eslint/no-unsafe-call
 registerGlobalErrorHandler();
 let prefersDark: MediaQueryList;
 if (typeof window === 'object') prefersDark = window.matchMedia('(prefers-color-scheme: dark)');

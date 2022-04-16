@@ -6,7 +6,7 @@ const loader = require('../loader/index.cjs.js');
 import { themes } from '@storybook/theming';
 import { withTests } from '@storybook/addon-jest';
 
-import results from '../.jest-test-results.json';
+import results from '../../../.jest-test-results.json';
 
 import { defineCustomElements } from '../dist/esm/loader';
 

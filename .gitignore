@@ -1,6 +1,8 @@
 dist/
 www/
 loader/
+build/
+next/
 
 *~
 *.sw[mnpcod]
@@ -30,3 +32,4 @@ build-storybook.log
 hydrate
 .scannerwork
 sonarqube/data
+.turbo

@@ -1,4 +1,4 @@
-# my-component
+# app-root
 
 
 
@@ -7,27 +7,21 @@
 
 ## Dependencies
 
-### Used by
-
- - [app-root](../..)
-
 ### Depends on
 
-- [pro-seo](../../utils)
-- [pro-carousel](../../atoms/carousel)
+- [component-gallery](./molecules/gallery)
 
 ### Graph
 ```mermaid
 graph TD;
-  component-gallery --> pro-seo
+  app-root --> component-gallery
   component-gallery --> pro-carousel
   pro-carousel --> pro-card
   pro-card --> pro-img
   pro-card --> pro-button
   pro-img --> pro-skeleton
   pro-button --> pro-skeleton
-  app-root --> component-gallery
-  style component-gallery fill:#f9f,stroke:#333,stroke-width:4px
+  style app-root fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

@@ -10,8 +10,6 @@ export namespace Components {
     }
     interface ComponentGallery {
     }
-    interface ErrorBoundry {
-    }
     interface ProButton {
         "name": string;
         "styles": { [key: string]: string };
@@ -25,10 +23,6 @@ export namespace Components {
         "height": number;
         "src": string;
         "width": number;
-    }
-    interface ProSeo {
-        "seoDescription": string;
-        "seoTitle": string;
     }
     interface ProSkeleton {
         "height": number;
@@ -49,12 +43,6 @@ declare global {
     var HTMLComponentGalleryElement: {
         prototype: HTMLComponentGalleryElement;
         new (): HTMLComponentGalleryElement;
-    };
-    interface HTMLErrorBoundryElement extends Components.ErrorBoundry, HTMLStencilElement {
-    }
-    var HTMLErrorBoundryElement: {
-        prototype: HTMLErrorBoundryElement;
-        new (): HTMLErrorBoundryElement;
     };
     interface HTMLProButtonElement extends Components.ProButton, HTMLStencilElement {
     }
@@ -80,12 +68,6 @@ declare global {
         prototype: HTMLProImgElement;
         new (): HTMLProImgElement;
     };
-    interface HTMLProSeoElement extends Components.ProSeo, HTMLStencilElement {
-    }
-    var HTMLProSeoElement: {
-        prototype: HTMLProSeoElement;
-        new (): HTMLProSeoElement;
-    };
     interface HTMLProSkeletonElement extends Components.ProSkeleton, HTMLStencilElement {
     }
     var HTMLProSkeletonElement: {
@@ -95,12 +77,10 @@ declare global {
     interface HTMLElementTagNameMap {
         "app-root": HTMLAppRootElement;
         "component-gallery": HTMLComponentGalleryElement;
-        "error-boundry": HTMLErrorBoundryElement;
         "pro-button": HTMLProButtonElement;
         "pro-card": HTMLProCardElement;
         "pro-carousel": HTMLProCarouselElement;
         "pro-img": HTMLProImgElement;
-        "pro-seo": HTMLProSeoElement;
         "pro-skeleton": HTMLProSkeletonElement;
     }
 }
@@ -108,8 +88,6 @@ declare namespace LocalJSX {
     interface AppRoot {
     }
     interface ComponentGallery {
-    }
-    interface ErrorBoundry {
     }
     interface ProButton {
         "name"?: string;
@@ -125,10 +103,6 @@ declare namespace LocalJSX {
         "src"?: string;
         "width"?: number;
     }
-    interface ProSeo {
-        "seoDescription"?: string;
-        "seoTitle"?: string;
-    }
     interface ProSkeleton {
         "height"?: number;
         "position"?: string;
@@ -138,12 +112,10 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "app-root": AppRoot;
         "component-gallery": ComponentGallery;
-        "error-boundry": ErrorBoundry;
         "pro-button": ProButton;
         "pro-card": ProCard;
         "pro-carousel": ProCarousel;
         "pro-img": ProImg;
-        "pro-seo": ProSeo;
         "pro-skeleton": ProSkeleton;
     }
 }
@@ -153,12 +125,10 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
             "component-gallery": LocalJSX.ComponentGallery & JSXBase.HTMLAttributes<HTMLComponentGalleryElement>;
-            "error-boundry": LocalJSX.ErrorBoundry & JSXBase.HTMLAttributes<HTMLErrorBoundryElement>;
             "pro-button": LocalJSX.ProButton & JSXBase.HTMLAttributes<HTMLProButtonElement>;
             "pro-card": LocalJSX.ProCard & JSXBase.HTMLAttributes<HTMLProCardElement>;
             "pro-carousel": LocalJSX.ProCarousel & JSXBase.HTMLAttributes<HTMLProCarouselElement>;
             "pro-img": LocalJSX.ProImg & JSXBase.HTMLAttributes<HTMLProImgElement>;
-            "pro-seo": LocalJSX.ProSeo & JSXBase.HTMLAttributes<HTMLProSeoElement>;
             "pro-skeleton": LocalJSX.ProSkeleton & JSXBase.HTMLAttributes<HTMLProSkeletonElement>;
         }
     }

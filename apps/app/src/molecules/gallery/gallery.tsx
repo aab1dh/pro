@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { Component, h, State, Watch, Fragment } from '@stencil/core';
-import { FetchProvider } from '../../utils/fetchprovider';
-import { loadTranslation, translation } from '../../utils/localization';
+import { FetchProvider } from '../../../../../packages/utils/fetchprovider';
+import { loadTranslation, translation } from '../../../../../packages/utils/localization';
 @Component({
   tag: 'component-gallery',
   styleUrl: 'gallery.scss',
