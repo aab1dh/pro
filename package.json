@@ -27,7 +27,8 @@
     "storybook": "cd apps/app && yarn storybook",
     "chromatic": "cd apps/app && yarn chromatic",
     "sonar": "cd apps/app && yarn sonar",
-    "test": "cd apps/app && yarn test"
+    "test": "cd apps/app && yarn test",
+    "build-storybook": "cd apps/app && yarn build-storybook"
   },
   "dependencies": {},
   "license": "MIT",
