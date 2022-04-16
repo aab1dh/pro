@@ -1,11 +1,28 @@
 import { newSpecPage } from '@stencil/core/testing';
 import { ComponentGallery } from './gallery';
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+global.fetch = jest.fn(
+  async () =>
+    await Promise.resolve({
+      json: () =>
+        Promise.resolve({
+          gallery: {
+            title: 'Gallery',
+            seoTitle: 'Gallery',
+            seoDescription: 'This is Gallery demo',
+          },
+        }),
+    }),
+) as any;
+
 describe('my-component', () => {
   it('renders', async () => {
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
     const { root } = await newSpecPage({
       components: [ComponentGallery],
-      html: '<component-gallery></component-gallery>',
+      // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+      html: `<component-gallery></component-gallery>`,
     });
     expect(root).toBeTruthy();
     // expect(root).toEqualHtml(`

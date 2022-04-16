@@ -31,7 +31,7 @@
     "start": "cd apps/app && yarn start",
     "storybook": "cd apps/app && yarn storybook",
     "chromatic": "cd apps/app && yarn chromatic",
-    "sonar": "cd apps/app && yarn sonar",
+    "sonar": "sonar-scanner   -D sonar.projectKey=pro-framework   -D sonar.sources=.   -D sonar.host.url=http://localhost:9000   -D sonar.login=aeed4ab9d33da44279d6baab58dbc4611c5df5ed",
     "test": "cd apps/app && yarn test",
     "build-storybook": "cd apps/app && yarn build-storybook"
   },
