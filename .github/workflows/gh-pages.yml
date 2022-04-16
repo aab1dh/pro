@@ -30,6 +30,8 @@ jobs:
         with:
           target_branch: gh-pages
           build_dir: apps/app/www
+          follow_symlinks: true
           jekyll: false
+          verbose: true
         env:
           GITHUB_TOKEN: ${{ secrets.PAGES_ACCESS_TOKEN }}
