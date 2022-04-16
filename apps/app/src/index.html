@@ -50,24 +50,9 @@
         display: block;
       }
     </style>
-       <script>
-      var index = document.createElement('script');
-      index.setAttribute( 'src', location.pathname + 'build/index.esm.js');
-      document.head.appendChild(index);
-
-      var esm = document.createElement('script');
-      esm.setAttribute( 'src', location.pathname + 'build/pro.esm.js');
-      esm.setAttribute( 'type', 'module');
-      document.head.appendChild(esm);
-
-      var pro = document.createElement('script');
-      pro.setAttribute( 'src', location.pathname + 'build/pro.js');
-      pro.setAttribute( 'nomodule', true);
-      document.head.appendChild(pro);
-    </script>
-    <script src="/build/index.esm.js"></script>
-    <script type="module" src="/build/pro.esm.js"></script>
-    <script nomodule src="/build/pro.js"></script>
+    <script async src="/build/index.esm.js"></script>
+    <script async type="module" src="/build/pro.esm.js"></script>
+    <script async nomodule src="/build/pro.js"></script>
   </head>
   <body style="background-color: var(--pro-background-color)">
     <app-root></app-root>
