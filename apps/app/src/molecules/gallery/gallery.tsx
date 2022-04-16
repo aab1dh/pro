@@ -16,7 +16,7 @@ export class ComponentGallery {
     console.log('The new value of title is: ', newValue[0]?.title);
     performance.mark('end');
     performance.measure('measure', 'start', 'end');
-    console.log('Time to hydrate', performance.getEntriesByType('measure'));
+    // console.log('Time to hydrate', performance.getEntriesByType('measure'));
   }
   connectedCallback() {
     performance.mark('start');
