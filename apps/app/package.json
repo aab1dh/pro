@@ -27,7 +27,7 @@
     "test.watch": "stencil test --spec --watchAll",
     "test.end-to-end": "stencil test --e2e",
     "storybook": "yarn build && start-storybook -p 6006 -s ./src",
-    "build-storybook": "build-storybook -c ./.storybook -o ./storybook-static",
+    "build-storybook": "build-storybook -s ./src/assets:assets -c ./.storybook -o ./storybook-static",
     "storybook-server": "http-server-spa storybook-static/ index.html 6006",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
     "prettify": "prettier --config ./.prettierrc.json 'src/**/*.@(js|jsx|ts|tsx|mdx)' --write",
