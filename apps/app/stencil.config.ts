@@ -39,10 +39,10 @@ export const config: Config = {
       //     '**/*.{js,css,json,html,ico,png,jpg,jpeg}'
       //   ]
       // },
-      copy: [
-        { src: '.nojekyll' },
-        { src: 'assets' }
-      ]
+      // copy: [
+      //   { src: '.nojekyll' },
+      //   { src: 'assets' }
+      // ]
     },
   ], plugins: [
     sass({

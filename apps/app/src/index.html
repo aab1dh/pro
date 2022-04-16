@@ -44,13 +44,13 @@
         margin-top: -60px;
       }
 
-      app-root:empty + .pre-loader {
+      component-gallery:empty + .pre-loader {
         opacity: 1;
         z-index: 100;
         display: block;
       }
     </style>
-    <script>
+       <script>
       var index = document.createElement('script');
       index.setAttribute( 'src', location.pathname + 'build/index.esm.js');
       document.head.appendChild(index);
@@ -65,6 +65,9 @@
       pro.setAttribute( 'nomodule', true);
       document.head.appendChild(pro);
     </script>
+    <script src="/build/index.esm.js"></script>
+    <script type="module" src="/build/pro.esm.js"></script>
+    <script nomodule src="/build/pro.js"></script>
   </head>
   <body style="background-color: var(--pro-background-color)">
     <app-root></app-root>
