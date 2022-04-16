@@ -18,9 +18,18 @@ jobs:
       - name: Generate your awesome content
         run: yarn prerender
 
-      - name: Publish generated content to GitHub Pages
-        uses: tsunematsu21/actions-publish-gh-pages@v1.0.2
+      -
+        name: Check GitHub Pages status
+        uses: crazy-max/ghaction-github-status@v2
         with:
-          dir: apps/app/www
-          branch: gh-pages
-          token: ${{ secrets.PAGES_ACCESS_TOKEN }}
+          pages_threshold: major_outage
+      -
+        name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: apps/app/www
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAGES_ACCESS_TOKEN }}
