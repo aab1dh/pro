@@ -21,6 +21,10 @@
       "outputs": ["dist/**", ".next/**", "public/dist/**"],
       "dependsOn": ["^build-storybook"]
     },
+    "chromatic": {
+      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "dependsOn": ["^chromatic"]
+    },
     "test": {
       "outputs": ["coverage/**"],
       "dependsOn": []
