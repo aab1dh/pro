@@ -6,7 +6,7 @@ import { Component, Prop, h } from '@stencil/core';
 
 // my-error-boundry.tsx
 @Component({ tag: 'pro-seo' })
-export class MyErrorBoundry {
+export class SEO {
   @Prop() seoTitle: string;
   @Prop() seoDescription: string;
   render() {

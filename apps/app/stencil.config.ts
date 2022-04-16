@@ -32,6 +32,7 @@ export const config: Config = {
       baseUrl: 'https://prodevsca.github.io/',
       prerenderConfig: './prerender.config.ts',
       // buildDir: '',
+      // dir: 'www',
       serviceWorker: null, // disable service workers
       // serviceWorker: {
       //   globPatterns: [

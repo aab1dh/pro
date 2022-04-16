@@ -9,12 +9,15 @@
 
 ### Depends on
 
+- [error-boundry](../../../packages/utils)
 - [component-gallery](./molecules/gallery)
 
 ### Graph
 ```mermaid
 graph TD;
+  app-root --> error-boundry
   app-root --> component-gallery
+  component-gallery --> pro-seo
   component-gallery --> pro-carousel
   pro-carousel --> pro-card
   pro-card --> pro-img

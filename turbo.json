@@ -4,6 +4,23 @@
       "outputs": ["dist/**", ".next/**", "public/dist/**"],
       "dependsOn": ["^build"]
     },
+    "prerender": {
+      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "dependsOn": ["^prerender"]
+    },
+    "start": {
+      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "dependsOn": ["^start"],
+      "cache": false
+    },
+    "storybook": {
+      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "dependsOn": ["^storybook"]
+    },
+    "build-storybook": {
+      "outputs": ["dist/**", ".next/**", "public/dist/**"],
+      "dependsOn": ["^storybook"]
+    },
     "test": {
       "outputs": ["coverage/**"],
       "dependsOn": []

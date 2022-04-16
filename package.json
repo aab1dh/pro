@@ -21,6 +21,11 @@
   "private": true,
   "postinstall": "cd apps/app && yarn",
   "scripts": {
+    "turbo:build": "turbo run build",
+    "turbo:prerender": "turbo run prerender",
+    "turbo:start": "turbo run start",
+    "turbo:storybook": "turbo run storybook",
+    "turbo:build-storybook": "turbo run build-storybook",
     "prerender": "cd apps/app && yarn prerender",
     "build": "cd apps/app && yarn build",
     "start": "cd apps/app && yarn start",

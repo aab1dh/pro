@@ -17,7 +17,7 @@
 
 ### Used by
 
- - [component-gallery](../molecules/gallery)
+ - [component-gallery](../../apps/app/src/molecules/gallery)
 
 ### Graph
 ```mermaid
