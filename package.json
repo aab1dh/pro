@@ -15,7 +15,7 @@
     "loader/"
   ],
   "scripts": {
-    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs && yarn sonar",
+    "build": "yarn prettify && yarn lint && yarn test && stencil build --docs",
     "prerender": "yarn prettify && yarn lint && yarn test && stencil build --docs --dev --prerender",
     "start:dev": "yarn prettify && yarn lint && yarn test && stencil build --dev --watch --serve",
     "start": "yarn prettify && yarn lint && yarn test && stencil build --watch --serve",
