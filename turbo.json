@@ -19,7 +19,7 @@
     },
     "build-storybook": {
       "outputs": ["dist/**", ".next/**", "public/dist/**"],
-      "dependsOn": ["^storybook"]
+      "dependsOn": ["^build-storybook"]
     },
     "test": {
       "outputs": ["coverage/**"],
