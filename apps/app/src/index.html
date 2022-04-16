@@ -51,12 +51,20 @@
       }
     </style>
     <script>
-      let path = location.pathname;
-      console.log('path', path);
+      var index = document.createElement('script');
+      index.setAttribute( 'src', location.pathname + 'build/index.esm.js');
+      document.head.appendChild(index);
+
+      var esm = document.createElement('script');
+      esm.setAttribute( 'src', location.pathname + 'build/pro.esm.js');
+      esm.setAttribute( 'type', 'module');
+      document.head.appendChild(esm);
+
+      var pro = document.createElement('script');
+      pro.setAttribute( 'src', location.pathname + 'build/pro.js');
+      pro.setAttribute( 'nomodule', true);
+      document.head.appendChild(pro);
     </script>
-    <script src="/pro/build/index.esm.js"></script>
-    <script type="module" src="/pro/build/pro.esm.js"></script>
-    <script nomodule src="/pro/build/pro.js"></script>
   </head>
   <body style="background-color: var(--pro-background-color)">
     <app-root></app-root>
