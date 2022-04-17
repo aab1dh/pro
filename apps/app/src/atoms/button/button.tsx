@@ -12,15 +12,16 @@ export class Button {
 
   @Prop() name: string;
 
-  @State() showBtn = false;
+  @State() showSkeleton = true;
 
   private handleClick($event: Event) {
     console.log($event.target);
   }
 
   private handleBtnLoad() {
-    this.host.shadowRoot.querySelector('div').style.visibility = null;
-    this.showBtn = false;
+    console.log('handleBtnLoad', this.host.shadowRoot);
+    this.host.shadowRoot.querySelector('div').style.visibility = 'visible';
+    this.showSkeleton = false;
   }
 
   componentDidLoad() {
@@ -30,9 +31,7 @@ export class Button {
   render() {
     return (
       <Fragment>
-        {this.showBtn === false && (
-          <pro-skeleton height={30} width={200} position="absolute" zIndex={-1}></pro-skeleton>
-        )}
+        {this.showSkeleton && <pro-skeleton height={30} width={200} position="absolute" zIndex={-1}></pro-skeleton>}
         <div
           innerHTML={this.name ? 'Like ' + this.name.split('=')[1] : this.host.innerHTML}
           style={this.styles}
