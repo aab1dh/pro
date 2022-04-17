@@ -27,7 +27,9 @@
     "storybook": "turbo run build --force && turbo run storybook",
     "build-storybook": "turbo run build --force && turbo run build-storybook",
     "test": "turbo run test",
-    "chromatic": "turbo run chromatic"
+    "chromatic": "turbo run chromatic",
+    "lint": "turbo run lint",
+    "prettify": "turbo run prettify"
   },
   "dependencies": {},
   "license": "MIT",

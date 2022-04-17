@@ -27,11 +27,15 @@
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": []
+      "dependsOn": ["^test"]
     },
     "lint": {
       "dependsOn": ["^build"],
-      "outputs": []
+      "outputs": ["^lint"]
+    },
+    "prettify": {
+      "dependsOn": ["^build"],
+      "outputs": ["^prettify"]
     },
     "dev": {
       "cache": false
