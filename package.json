@@ -25,7 +25,7 @@
     "prerender": "turbo run prerender",
     "start": "turbo run start",
     "storybook": "turbo run build --force && turbo run storybook",
-    "build-storybook": "turbo run build && turbo run build-storybook",
+    "build-storybook": "turbo run build --force && turbo run build-storybook",
     "test": "turbo run test",
     "chromatic": "turbo run chromatic"
   },
