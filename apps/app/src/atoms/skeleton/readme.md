@@ -9,9 +9,9 @@
 
 | Property   | Attribute  | Description | Type     | Default     |
 | ---------- | ---------- | ----------- | -------- | ----------- |
-| `height`   | `height`   |             | `number` | `undefined` |
+| `height`   | `height`   |             | `number` | `200`       |
 | `position` | `position` |             | `string` | `undefined` |
-| `width`    | `width`    |             | `number` | `undefined` |
+| `width`    | `width`    |             | `number` | `200`       |
 | `zIndex`   | `z-index`  |             | `number` | `undefined` |
 
 

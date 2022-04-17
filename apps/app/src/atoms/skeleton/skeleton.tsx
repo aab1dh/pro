@@ -6,8 +6,8 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class Skeleton {
-  @Prop() height: number;
-  @Prop() width: number;
+  @Prop() height = 200;
+  @Prop() width = 200;
   @Prop() position: string;
   @Prop() zIndex: number;
   render() {
