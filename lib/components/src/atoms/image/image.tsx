@@ -30,16 +30,18 @@ export class Image {
   render() {
     return (
       <Fragment>
-        {this.showImg === false && <pro-skeleton width={200} height={200}></pro-skeleton>}
-        <img
-          innerHTML={this.host.innerHTML}
-          style={{ ['visibility']: 'hidden' }}
-          onLoad={() => this.handleImgLoad()}
-          loading="lazy"
-          src={this.src}
-          width={this.width}
-          height={this.height}
-        />
+        <div>
+          {<pro-skeleton width={200} height={200}></pro-skeleton>}
+          <img
+            innerHTML={this.host.innerHTML}
+            style={{ ['visibility']: 'hidden' }}
+            onLoad={() => this.handleImgLoad()}
+            loading="lazy"
+            src={this.src}
+            width={this.width}
+            height={this.height}
+          />
+        </div>
       </Fragment>
     ) as HTMLElement;
   }

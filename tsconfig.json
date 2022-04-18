@@ -20,9 +20,9 @@
     "baseUrl": ".",
     "pretty": true,
     "paths": {
-      "@utils": ["packages/utils/src/src/utils/index.ts"]
+      "@utils": ["packages/utils/index.ts"]
     },
   },
-  "include": ["apps/app/src", "apps/app/global.d.ts", "packages/utils", "src"],
+  "include": ["lib/components/src", "lib/components/global.d.ts", "packages/utils", "src"],
   "exclude": []
 }
