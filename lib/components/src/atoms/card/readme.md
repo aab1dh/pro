@@ -29,7 +29,6 @@ graph TD;
   pro-card --> pro-img
   pro-card --> pro-button
   pro-img --> pro-skeleton
-  pro-button --> pro-skeleton
   pro-carousel --> pro-card
   style pro-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
