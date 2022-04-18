@@ -18,21 +18,10 @@ export class Button {
     console.log($event.target);
   }
 
-  // private handleBtnLoad() {
-  //   // this.host.shadowRoot.querySelector('div').style.visibility = 'visible';
-  //   this.showSkeleton = false;
-  // }
-
-  // componentWillLoad() {
-  //   setTimeout(() => {
-  //     this.handleBtnLoad();
-  //   }, 0);
-  // }
-
   render() {
     return (
       <Fragment>
-        {<pro-skeleton height={30} width={200} position="absolute" zIndex={-1}></pro-skeleton>}
+        {/* {<pro-skeleton height={30} width={200} position="absolute" zIndex={-1}></pro-skeleton>} */}
         {
           <div
             innerHTML={this.name ? 'Like ' + this.name.split('=')[1] : this.host.innerHTML}

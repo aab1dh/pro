@@ -19,13 +19,11 @@
 
 ### Used by
 
- - [pro-button](../button)
  - [pro-img](../image)
 
 ### Graph
 ```mermaid
 graph TD;
-  pro-button --> pro-skeleton
   pro-img --> pro-skeleton
   style pro-skeleton fill:#f9f,stroke:#333,stroke-width:4px
 ```

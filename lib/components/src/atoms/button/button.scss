@@ -12,7 +12,6 @@
     box-shadow: 0 0 5px -1px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     vertical-align: middle;
-    // max-width: 100px;
     padding: 5px;
     text-align: center;
     user-select: none;
@@ -20,9 +19,6 @@
     -webkit-user-select: none; /* Chrome/Safari */
     -moz-user-select: none; /* Firefox */
     -ms-user-select: none; /* IE10+ */
-    // position: absolute;
-    // top: 0;
-    width: 100%;
   }
   div:hover {
     color: red;

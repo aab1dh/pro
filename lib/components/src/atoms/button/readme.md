@@ -19,14 +19,9 @@
 
  - [pro-card](../card)
 
-### Depends on
-
-- [pro-skeleton](../skeleton)
-
 ### Graph
 ```mermaid
 graph TD;
-  pro-button --> pro-skeleton
   pro-card --> pro-button
   style pro-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
