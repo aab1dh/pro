@@ -29,7 +29,7 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2
         with:
           target_branch: gh-pages
-          build_dir: apps/app/www
+          build_dir: lib/components/www
           follow_symlinks: true
           jekyll: false
           verbose: true

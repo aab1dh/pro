@@ -16,7 +16,8 @@
   ],
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "lib/*"
   ],
   "private": true,
   "postinstall": "cd apps/app && yarn",

@@ -33,4 +33,4 @@ hydrate
 .scannerwork
 sonarqube/data
 .turbo
-apps/packages/utils
+lib/packages
